@@ -1,0 +1,62 @@
+add_executable(benchmark benchmark.cpp)
+target_link_libraries(benchmark lua luabind)
+
+#add_executable(test_abstract_base main.cpp test_abstract_base.cpp)
+#target_link_libraries(test_abstract_base lua luabind)
+
+
+set(fileexe 
+test_abstract_base 
+test_adopt 
+test_adopt_wrapper 
+test_attributes 
+test_automatic_smart_ptr 
+test_back_reference 
+test_builtin_converters 
+test_class_info 
+test_collapse_converter 
+test_const 
+test_construction 
+test_create_in_thread 
+test_def_from_base 
+test_dynamic_type 
+test_exceptions 
+test_exception_handlers 
+test_extend_class_in_lua 
+test_free_functions 
+test_has_get_pointer 
+test_held_type 
+test_implicit_cast 
+test_implicit_raw 
+test_iterator 
+test_lua_classes 
+test_null_pointer 
+test_object 
+test_operators 
+test_policies 
+test_private_destructors 
+test_properties 
+test_scope 
+test_separation 
+test_set_instance_value 
+test_shadow 
+test_shared_ptr 
+test_simple_class 
+test_smart_ptr_attributes 
+test_super_leak 
+test_table 
+test_tag_function 
+test_typetraits 
+test_unsigned_int 
+test_user_defined_converter 
+test_value_wrapper 
+test_vector_of_object 
+test_virtual_inheritance 
+test_yield 
+
+)
+
+foreach(loopf  ${fileexe})
+add_executable(${loopf} main.cpp ${loopf}.cpp)
+target_link_libraries(${loopf} lua luabind)
+endforeach(loopf)
