@@ -1,0 +1,23 @@
+* pyzmq
+** https://github.com/zeromq/pyzmq
+** git://github.com/zeromq/pyzmq.git
+
+* luazmq
+** https://github.com/iamaleksey/lua-zmq
+** git://github.com/iamaleksey/lua-zmq.gitx
+
+* zeromq2-2
+** https://github.com/zeromq/zeromq2-2
+** git://github.com/zeromq/zeromq2-2.git
+
+* zeromq3-0
+** https://github.com/zeromq/zeromq3-0
+** git://github.com/zeromq/zeromq3-0.git
+
+* python
+** https://github.com/python-git/python
+** git://github.com/python-git/python.git
+
+* cpyhon
+** https://github.com/cython/cython
+** git://github.com/cython/cython.git
