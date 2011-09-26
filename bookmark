@@ -13,7 +13,7 @@
 * zeromq3-0
 ** https://github.com/zeromq/zeromq3-0
 ** git://github.com/zeromq/zeromq3-0.git
-
+   
 * python
 ** https://github.com/python-git/python
 ** git://github.com/python-git/python.git
@@ -22,6 +22,47 @@
 ** https://github.com/cython/cython
 ** git://github.com/cython/cython.git
 
-
+* 
 ssh-keygen -t rsa -C "your_email@youremail.com"
 git push origin master
+
+
+git push 
+git pull
+
+
+chrome://net-internals/#requests
+
+
+* golang
+
+**  download &install mercurial
+
+http://mercurial.selenic.com/
+
+
+*** Clone a project and push changes
+
+$ hg clone http://selenic.com/repo/hello
+$ cd hello
+$ (edit files)
+$ hg add (new files)
+$ hg commit -m 'My changes'
+$ hg push
+
+*** Create a project and commit
+
+$ hg init (project-directory)
+$ cd (project-directory)
+$ (add some files)
+$ hg add
+$ hg commit -m 'Initial commit'
+
+
+** download & install  go 
+*** download 
+hg clone -u release https://go.googlecode.com/hg/ go
+
+*** install
+cd go/src
+$ ./all.bash
