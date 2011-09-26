@@ -31,7 +31,8 @@ git clone git://github.com/luabind/luabind.git
 
 * v8
 http://code.google.com/p/v8
-svn checkout http://v8.googlecode.com/svn/trunk/ v8
+git clone git://github.com/v8/v8.git
+
 
 * google-sparsehash 
 http://code.google.com/p/google-sparsehash/
