@@ -27,7 +27,13 @@ ssh-keygen -t rsa -C "your_email@youremail.com"
 git push origin master
 
 
+* how to commit to git 
+git add (newfile)
+git add --update  (modifiedfile)
+git commit -m "(info)"
 git push 
+
+* how to update 
 git pull
 
 
