@@ -1,0 +1,165 @@
+svn co https://scriptdev2.svn.sourceforge.net/svnroot/scriptdev2
+git clone git://github.com/mangos/mangos.git
+
+MaNGOS 官网
+　　http://www.mangosproject.org/forum/
+　　http://mangosproject.org/forum/
+
+
+SDB 论坛: 
+　　http://sdb.unix7.net/forums/index.php
+　　http://sdb.unix7.net/forums/index.php?showtopic=2335 ( Last Release Version )
+
+Mangos (git)
+svn co https://scriptdev2.svn.sourceforge.net/svnroot/scriptdev2
+git clone git://github.com/mangos/mangos.git
+
+
+Mangos 脚本(SVN) :
+　　MangosScript : https://opensvn.csie.org/ScriptDev/trunk/
+　　mangos-luascript : http://mangos-luascript.googlecode.com/svn/trunk
+
+
+MaNGOS版本 主程序更新（不断更新）
+　　http://www.mangos-files.de/index.php?show=revs
+　　http://www.9iwow.com/viewthread.php?tid=4410
+　　http://www.hhdvd.com/bbs/read.php?tid-47.html
+
+
+MaNGOS 物品代码
+　　http://wow.allakhazam.com/
+
+NGACN.COM 译文词典:
+　　http://db.ngacn.com/main_php^func^173^target_id^f.html
+
+mangos 函数查询:
+　　http://213.83.30.116/doxygen/html/
+
+Mangos php Web site
+　　http://opensvn.csie.org/MangosWFE/
+
+
+
+Mangos数据库:
+　　https://opensvn.csie.org/SDB/
+　　http://chronosdb.googlecode.com/svn/trunk/Database/
+　　http://worldofmangos.googlecode.com/svn/trunk/
+　　https://opensvn.csie.org/mangoDB/mangoDB/ ( 英文 mangoDB 数据库)
+　　https://opensvn.csie.org/CaNGOs/ ( 中文 utf8 数据库 )
+
+
+MaNGOS研究论坛
+1, 龙苑论坛 http://bbs.lanlong.net/forumdisplay.php?fid=93 
+2, 飘雪论坛 http://www.hhdvd.com/bbs/thread.php?fid-5.html
+3, 芒果开发 http://www.mgwow.net/bbs/index.php
+4, 一品论坛 http://bbs.epingame.com/forumdisplay.php?fid=5
+5, 芒果中国 http://mangos.goodbj.com/bbs/index.php
+6, 99nets http://bbs.99nets.com/thread.php?fid=76
+7, 风云网游 http://www.fygame.cn/bbs/thread.php?fid-41.html
+8, 石熊论坛 http://bbs9.70bb.com/forumdisplay.php?fid=1266
+9, 芒果中国 http://www.mangoscn.org/bbs/ 
+10, 无忧论坛 http://wow.51here.com/bbs/ 
+
+-, 飘雪空间 http://free.ys168.com/?piaoxue2033750
+-, 个人空间 http://slowlysea.gbdisk.com/
+-, 个人空间 http://www2.kupan.cn/?wahaha78 
+-, 个人空间 http://www1.kupan.cn/?meibu
+
+转：授人以鱼不如授人以渔，献上新编mangos编译教程 
+2011-03-05 15:52
+一、工具准备篇
+古人云，工欲善必先利其器。要想成功编译mangso服务端，就必须先准备好各种必需的软件。
+1、操作系统：Windows XP, Vista, or 7; 32-bit or 64-bit（这里只针对windows系统，linux系统如果大家有需要单独开贴）
+2、编译软件：Microsoft Visual Studio 2008 或 Microsoft Visual Studio 2010（2005其实也可以）
+3、源码管理软件：Git；TortoiseGit；TortoiseSVN（版本其实没太大关系）
+4、数据库整合平台：easyPHP
+5、数据库管理软件：Navicat_for_MySQL
+
+部分工具下载地址：
+Git：http://code.google.com/p/msysgit/downloads/detail?name=Git-1.7.4-preview20110204.exe
+TortoiseGit：http://www.onlinedown.net/soft/101591.htm
+TortoiseSVN：http://dl.pconline.com.cn/download/53122.html
+easyPHP: http://www.onlinedown.net/soft/32078.htm
+Navicat_for_MySQL: http://www.skycn.com/soft/20281.html
+
+
+二、源码获取篇
+进行一下步骤前，请先安装好上述的各种软件。
+1、获取mangos源码
+   为了便于新人的学习，这里往下我会详细的说明。
+   当成功安装好Git软件后，点击开始->所有程序->git->git GUI（此为git的图形使用界面），会弹出git窗口。这时我们点击
+
+“克隆已有的数据库”，会弹出另外一个新的窗口。
+   在窗口中 "source Location"对应的文本框中填写mangos源的地址(git://github.com/mangos/mangos.git),"Target Directory"对应的文本框填写预保存的本地地址，例如: d:\mangosCore\mangos（注意：d:\mangosCore\mangos中的mangos文件夹不要提前创建，软件会自动创建的，如果选择已有文件夹，程序会报错）。全部填写完毕后点击“克隆”按钮，开始下载源码。之后就是漫长的等待，看各位的网速了，大概100多M的数据量。当所有数据下载完毕后，会弹出如下窗口。点击窗口中选中的菜单，会显示出当前源码的版本，及以往所有版本的修改内容、修改时间等。
+
+
+    
+下载 (42.32 KB)
+
+2011-2-25 13:14
+
+2、获取ScriptDev2源码
+   成功获取mangos源码后，我们接下来下载ScriptDev2源码。ScriptDev2是wow中的AI脚本系统。其实就算不编译这个mangso也能运行，但谁也不想自己服务器上的怪一个个都傻乎乎的像木头一样就会直接砍人吧。
+   好了，言归正传，在刚刚下载的mangos源码中的“src\bindings”下面建立一个文件夹，名字为“ScriptDev2”。然后在文件夹上面点击鼠标右键，选择“SVN Checkout”，会弹出如下窗口。我们在"URL of repostory"对应的文本框汇中填入criptDev2源码的地址 "https://scriptdev2.svn.sourceforge.net/svnroot/scriptdev2/" ，然后点击"OK"按钮。接下来就是继续等待，下载完毕后，软件会提示并显示出当前的ScriptDev2版本。
+
+
+   
+
+3、获取YTDB数据库
+   下面就是下载YTDB数据库了。YTDB数据库是一个整合了ACID和scriptdev2脚本的数据库，具体我就不详细介绍了。登录“http://svn2.assembla.com/svn/ytdbase/”，选择最新的版本。我写这篇文章的时候，YTDB数据库最新大版本号是R58，我们点击页面上的"R58",在新的页面中下载“YTDB_0.14.1_R580_MaNGOS_R11000_SD2_R1946_ACID_R307_RuDB_R38.6.7z ”这个大版本的完整数据库。该页面还有一个Updatas文件夹，是这个的版本的升级补丁，我们也要全部下下来。按他的编号顺序命名，不要搞错了顺序。数据库文件保存的位置随意，不要跟mangos混在一起就行了。如果想查看每个升级补丁修复了什么，请到他的官方论坛“http://ytdb.ru/”去查找。
+
+
+三、源码编译篇
+    一切准备就绪，下面我们就进入源码的编译环节。其实编译环节倒是最最省事，最最简单的环节  -_-!!
+1、编译mangso源码
+打开mangos源码中的“win”文件夹下的“mangosdVC90”文件（vs2010用mangosdVC100文件，vs2005用mangosdVC80文件），VS2008会自动加载mangos项目。我们在窗口上方如下图的位置中选择解决方案配置为"Release"。然后按F7键（或点击菜单中的生成->生成解决方案）。接下来，我们可以去冲杯咖啡，提提神。正常情况下，编译能全部正常完成不报错，只会提示一个警告，说一个文件需要转换成unicode编码，这个可以无视掉，当然你也可以自行转换一下再重新编译（用记事本打开然后另存，选择utf8编码就可以了）。
+
+   
+
+
+
+
+2、编译ScriptDev2源码
+打开“\src\bindings\ScriptDev2”下的scriptVC90文件（vs2010用scriptVC100文件，vs2005用scriptVC80文件），剩下的步骤同上，我就不多废话了。正常编译下来，不会有任何错误与警告。需注意一点，只有编译了mangso后才能够编译ScriptDev2，不然会报错。
+
+3、拷贝出编译后的文件
+正常完成前两个步骤后，到“\bin\Win32_Release”拷贝出dll、exe结尾的所有数据，其它无视。应该是下面9个文件。。然后再把“\src\mangosd”目录下的mangosd.conf.dist.in和“mangos\src\realmd”目录下的realmd.conf.dist.in和以上文件拷贝到一起，并从命名为mangosd.conf；realmd.conf。
+    
+
+
+
+4、解压DBC、MMap及VMap文件
+mangos源码的“\contrib\extractor”文件夹与“\contrib\vmap_extract_assembler_bin”文件夹下分别存放着当前版本的map及vmap解压工具。放在客户端根目录里面运行后，把DBC、MAP、VMAP三个文件夹拷贝到你自己编译好的服务端下，就大功告成了。下面进行数据库的配置。
+
+四、数据库导入篇
+1、mangos基本库的建立
+   首先，让我们先启动mysql数据库。如果你安装的是我上面说的easyPHP，那么请运行easyPHP程序。其它的mysql数据库整合平台请自行参考相应的说明。其实装什么整合平台都无所谓，主要就是启动好mysql数据库就可以了。easyPHP默认的用户名为root,密码没有。
+
+   接下来，我们用Navicat连接数据库。执行Navicat后，点击左上角的连接按钮，在弹出窗口中填好你的本机的名称、数据库用户名、密码及连接名（连接名随便起即可，下面我以wowdata代替），端口号默认为3306，不动即可。测试连接没有问题后，点确定即可。
+
+   双击左面你刚刚建好的连接，就可以操作数据库了（mysql初始带有几个默认库，不熟悉的人请不要删除或改动）。我们在wowdata上面点击鼠标右键，选择"运行SQL文件"；首先运行“sql"文件夹下“create_mysql.sql”及“\src\bindings\ScriptDev2\sql”文件夹下的“scriptdev2_create_database.sql”文件，编码选择“65001 (UTF-8)”。右键刷新一下数据库，会发现mangos端的基本库已经创建出来了，分别是characters库、realmd库、mangos库、scriptdev2库。
+   接下来，我们分别在每个库上点右键，导入各自库的详细内容，具体如下
+   (1) characters库：“sql"文件夹下characters.sql；
+   (2) realmd库：“sql"文件夹下realmd.sql；
+   (3) scriptdev2库: “\src\bindings\ScriptDev2\sql”文件夹下的scriptdev2_script_full.sql;
+   (4) mangos库: 注意，这里导入我们下载的YTDB库，也就是YTDB_0.14.1_R580_MaNGOS_R11000_SD2_R1946_ACID_R307_RuDB_R38.6.7z文件解压出来的sql文件。超级费时间，预计要6个小时吧。
+
+   睡一觉起来，发现YTDB也终于倒完了。先别高兴，还没完。由于YTDB数据库并不适合最新版的mangso端，我们还要为mangos库打补丁。记得先前下载的YTDB升级补丁吧，在mangso库上按顺序逐步运行（这里要注意一点，只需打YTDB补丁中名字带mangos的补丁，characters的不用打）。把YTDB更新的最新版后，我们打开mangos库的db_version表，看最后一列的列名前面的编号，目前应该是11169_02。记下这个编号，然后再mangos库上点右键，继续选择导入sql文件。逐一导入mangos源码下“\sql\updates”文件夹下11169_02号以后的所有sql文件，OK，现在终于大功告成了！
+
+   到此为止，mangos的服务端算是正常架设完毕了。分别运行realmd.exe和mangosd.exe，服务端就能正常启动了。mangosd.conf文件中可以配置命令行的颜色，默认所有为白色。请参照芒果中国的端自行配置。如果按以上教程全部正常完成，启动时不会出现红字错误信息的。  
+
+   用户的注册我就不多说了，找个注册页面就行了（例如芒果中国的，呵呵）。用easyPHP的话，把芒果中国下的“Web_Mysql\htdocs”文件夹下的所有文件拷贝到easyPHP的“www”文件夹下，然后IE地址栏打http://localhost就行了。想深入了解请在百度上搜 apache 方面的知识。
+
+   当我们进入游戏后，会发现所有内容对话内容都是英文的,oh my god！很郁闷是吧，费了这么半天劲。这时候，轮到我们伟大的朋友 alan0100 猫猫 出场了，感谢他在空余时间辛勤的汉化了YTDB库中的内容，汉化补丁请自行在 MgCore 数据资料区寻找，浩大的数据量和工作量啊。请允许我代表整个艾泽拉斯大陆的同胞们向alan0100同志表示衷心的感谢！剩下的没汉化内容也请再接再励！具体打补丁的步骤我就不说了，相信大家也逐步都了解了。
+
+五、源码更新及patch补丁应用篇
+    暂时先放一放
+
+ 
+
+六、结语篇
+    之所以写下这篇编译说明，是想让更多的朋友走进mangos的世界，不要总停留在使用现有端的平面上，大家在娱乐的同时能够学会一些知识还是很有必要的。
+
+    顺便说一句，很多人认为没打任何补丁的端就是垃圾，其实是太偏执了。如果单机自己玩的话，还是非常不错的。不相信的朋友可以自己感触一下。全世界n多高手聚集在一起的开源软件，更新的都是垃圾？呵呵。我笑而不语。
+
+    大家有空可以到mangos的官方论坛去感受一下，国外的开源软件氛围还是非常好的。其实我们所谓的大部分的修复补丁都来自http://getmangos.com/community/论坛（注册登录才能看到该板块），一些补丁经过mangos团队审核没有问题后，就会添加到新的mangos源里面。还有一些个性的补丁，例如机器人，宝石等等，论坛全部有下载和说明。如果大家有时间有精力，完全可以自行找一些需要的补丁，让自己的服务端保持在最新的状态，吃喝不求人，哈哈。
