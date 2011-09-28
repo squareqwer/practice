@@ -45,7 +45,8 @@ svn checkout http://google-sparsehash.googlecode.com/svn/trunk/ google-sparsehas
 http://code.google.com/p/google-perftools/
 svn checkout http://google-perftools.googlecode.com/svn/trunk/ google-perftools-read-only
 
-
+* erlang
+git clone git://github.com/erlang/otp.git
 
 
 * how to use git
