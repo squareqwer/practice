@@ -50,6 +50,9 @@ git clone git://github.com/erlang/otp.git
 ** how build erlang 
 ./ otp_build  setup
 
+* textmate erlang.tmbundle
+svn co http://svn.textmate.org/trunk/Bundles/Erlang.tmbundle
+
 
 * amf3cplusplus
 svn checkout http://amf3cplusplus.googlecode.com/svn/trunk/ amf3cplusplus-read-only
