@@ -1,29 +1,41 @@
+* zeromq3-0
+消息队列
+https://github.com/zeromq/zeromq3-0
+git clone git://github.com/zeromq/zeromq3-0.git
+
+
+
 * pyzmq
+python 封装消息队列zmq
 https://github.com/zeromq/pyzmq
 git clone git://github.com/zeromq/pyzmq.git
 
 * luazmq
+lua 封装消息队列zmq
 https://github.com/iamaleksey/lua-zmq
 git clone git://github.com/iamaleksey/lua-zmq.gitx
-
-* zeromq3-0
-https://github.com/zeromq/zeromq3-0
-git clone git://github.com/zeromq/zeromq3-0.git
    
 * python
+python git源码
 https://github.com/python-git/python
 git clone git://github.com/python-git/python.git
 
 * cpyhon
+python 的c模块生成 
 https://github.com/cython/cython
 git clone git://github.com/cython/cython.git
 
 * luaJIT-2.0 
+lua 的jit 生成二进制代码
 git clone http://luajit.org/git/luajit-2.0.git
 
 * memcached
 http://github.com/memcached/memcached
 git clone git://github.com/memcached/memcached.git
+
+* redis
+git clone git://github.com/antirez/redis.git
+
 
 * luabind
 https://github.com/luabind/luabind
@@ -50,13 +62,25 @@ git clone git://github.com/erlang/otp.git
 ** how build erlang 
 ./ otp_build  setup
 
+* yaws
+使用erlang的httpserver
+git clone git://github.com/dimitri/el-get.git
+
+* mochiweb
+使用erlang的httpserver
+git clone git://github.com/mochi/mochiweb.git
+
 * textmate erlang.tmbundle
+textmate的erlang 插件
 svn co http://svn.textmate.org/trunk/Bundles/Erlang.tmbundle
 
-
 * amf3cplusplus
+c++ 的amf3
 svn checkout http://amf3cplusplus.googlecode.com/svn/trunk/ amf3cplusplus-read-only
 
+* el_get
+emacs 的插件管理
+git clone git://github.com/dimitri/el-get.git
 
 * how to use git
 git config --global user.name 
