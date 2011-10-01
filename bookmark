@@ -3,8 +3,6 @@
 https://github.com/zeromq/zeromq3-0
 git clone git://github.com/zeromq/zeromq3-0.git
 
-
-
 * pyzmq
 python 封装消息队列zmq
 https://github.com/zeromq/pyzmq
@@ -61,6 +59,11 @@ svn checkout http://google-perftools.googlecode.com/svn/trunk/ google-perftools-
 git clone git://github.com/erlang/otp.git
 ** how build erlang 
 ./ otp_build  setup
+
+* onecached
+erlang memcached
+https://git.process-one.net/onecached
+git clone git://git.process-one.net/onecached/mainline.git
 
 * yaws
 使用erlang的httpserver
