@@ -1,0 +1,122 @@
+/ 永远 小数
+div 整数除法
+rem 整数除法取余数
+
+变量 第一个字母大写
+原子 原子是一串以小写字母开头，后跟数字字母或下滑线(_)或邮件符号(@)的字符，使用单引号引起来的字符也是原子
+元组 将若干个以逗号分割的值用一对花括号引起来
+列表 将若干个以逗号分割的值用一对方括号引起来 定义列表 ［H|T］
+
+列表解析 记号[F(X)||X<-L]代表 由F(X) 组成的列表，其中X是取值于列表L
+lists:map(fun(X)->2*X end,example1:qsort(L)).
+[2*X||X<-L].
+[2*X||X<-example1:qsort(L)].
+% erlang qsort 
+qsort([])->
+    [];
+qsort([Pivot|T]) ->
+    qsort([X||X<-T,X<Pivot]) 
+        ++[Pivot]++ 
+        qsort([X||X<-T,X>=Pivot]).
+
+
+
+
+操作       描述                                                   参数类型       优先级
+Op        Description                                            Argument Type	Priority                                                                           
++X        +X                                                     Number         1                
+-X        -X                                                     Number         1                
+X*Y       X*Y                                                    Number         2                
+X/Y       X / Y(floating-point division)(浮点数相除)              Number       	2               
+bnot X    Bitwise not of X(对X按位取反)                           Integer	2               
+X div Y   Integer division of X and Y(X整除Y)                    Integer	2               
+X rem Y   Integer remainder of X divided by Y(X除Y取余数)        Integer        	2               
+X band Y  Bitwise and of X and Y(对X和Y按位取与)                  Integer	2               
+X+Y       X+Y                                                   Number          3                
+X-Y       X-Y                                                    Number         3                
+X bor Y   Bitwise or of X and Y(对X和Y按位取或)                   Integer	3               
+X bxor Y  Bitwise xor of X and Y(对X和Y按位进行异或)               Integer	3               
+X bsl N   Arithmetic bitshift left of X by N bits(对X按位左移N位) Integer	3               
+X bsr N   Bitshift right of X by N bits(对X按位右移N位)           Integer	3                                                                                   
+
+
+断言      
+
+可以在函数定义的头部使用断言，此时断言必须使用以关键字when开头，也可以在任何语言中允许使用表达式的地方是使用断言。当断言用于表达式的时候，他们会被求值为原子true或false
+
+断言序列
+可以用分号；分开断言集合，当断言集合中有一个断言为真的时候，整个断言集合都为真
+可以用逗号，分开断言集合，当所有的断言都为真的时候，断言集合才为真
+
+合法的断言表达式只是合法的erlang表达式的子集。为了保证断言没有副作用，断言不能使用用户定义的布尔表达式，因为无法确定是哦否没有副作用，也不能保证是否能从函数中退出
+下面是断言的合法的语法形式。
+原子true，
+其他常量(条件或绑定变量)，这些在断言表达式中都会被求值为false，
+断言谓词，BIF，
+比较表达式，
+算数表达式，
+布尔biaods，
+短路布尔表达式。
+
+断言谓词
+
+谓词                                	 含义
+is_atomic(X)                            X是原子
+is_binay(X)                             X是二进制数据
+is_constant(X)                          X是常数
+is_float(X)                             X是浮点数
+is_integer(X)                           X是整数
+is_list(X)                              X是列表
+is_number(X)                            X是整数或浮点数
+is_pid(X)                               X是进程标识符
+is_port(X)                              X是端口
+is_reference(X)                         X是引用
+is_function(X)                          X是函数
+is_function(X,N)                        X是有N个参数的函数
+is_tuple(X)                             X是元组
+is_record(X,Tag)                        X是标记为Tag的记录
+is_record(X,Tag,N)                      X是标记为Tag大小为N的记录      
+
+断言BIF
+函数                                    含义
+abs(X)                                  X的绝对值
+element(X，N)                           元组X的第N个元素
+float(X)                                将数字X转换为浮点数
+hd(X)                                   列表X的头部
+length(X)                               列表X的长度
+node()                                  当前节点
+node(X)                                 创建X的节点，X可以是进程标识符、引用或端口
+round(X)                                将数字X转换为整数(四舍五入)
+self()                                  当前进程标识符
+size(X)                                 X的大小，X为元组或二进制数据
+trunc(X)                                将数字X转换为整数(截取)
+tl(X)                                   列表X的尾部 
+
+短路布尔表达式
+
+and andalso
+or orelse
+
+
+
+
+
+记录
+
+记录(record)就是提供一种方法把一个名称与元组中的元素对应起来
+－record(Name,{
+    %% 有默认值的
+    Key1 = Default1,
+    Key1 = Default2,
+    ...
+    %% 没有默认值
+    Key3,
+    ...}).
+
+
+异常 
+
+try 
+catch
+after
+end
