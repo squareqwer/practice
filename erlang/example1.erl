@@ -83,7 +83,7 @@ odds_and_evens_acc(L)->
     odds_and_evens_acc(L,[],[]).
 
 odds_and_evens_acc([H|T],Odds,Evens)->
-case (H rem 2) of
+case (H rem 2) of %%条件判断有点象switch 
     1 -> odds_and_evens_acc(T,[H|Odds],Evens);
         0 -> odds_and_evens_acc(T,Odds,[H|Evens])
                                     end;
@@ -129,3 +129,15 @@ demo3()->
         eror:X->
             {X,erlang:get_stacktrace()}
     end.
+
+
+
+
+
+
+%%erlang 宏
+
+-define(DWORD ,32/unsigned-little-integer).
+-define(LONG, 32/unsigned-little-integer).
+-define(WORD, 16/unsigned-little-integer).
+-define(BYTE, 8/unsigned-little-integer).)

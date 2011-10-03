@@ -120,3 +120,47 @@ try
 catch
 after
 end
+
+
+二进制
+二进制数据以一个整数或者字符序列的形式出现，两端分别用两个小于号和两个大于号括起来
+<<1,2,3,4>>.
+<<"dwedewfr3d">>.
+
+操作二进制的BIF
+
+@spec list_to_binary(IoList)->binary()
+@spec split_binary(Bin,Pos)->{Bin1,Bin2}
+
+@spec term_to_binary(Term)->Bin
+@spec binary_to_term(Bin)->Term
+
+
+比特语法
+比特语法表达式有如下形式
+<<>>
+<<>E1，E2，...,En>
+每一个元素Ei代表二进制数据中的一个单独区块。每一个元素Ei都有如下4种形式:
+E＝ Value |
+    Value:Size |
+    Value/TypeSpeciferList|
+    Value:Size?TypeSpeciferList
+无论使用哪种形式，二进制数据中的总比特数必须要恰好被8整除
+
+而TypeSpecifierList有这样的格式：End-Sign-Type-Unit，
+@type End = big | little | native，默认big，这个就是所谓的大头(big)、下头(little)，而native取决于本地系统
+@type Sign = signed | unsigned，默认unsigned
+@type Type = integer | float | binary，默认integer
+@type Unit = 1 | 2 | ... 255，默认取决于Type，如果Type为integer或者float则Unit为1；为binary则Unit为8
+另外，
+Size是表示一个单元（Unit）的位数（bit），默认情况，如果Type为integer则Size为8；为float则Size为64，为binary则为二进制的长度（就是说为当前二进制值的长度）
+（关心默认值有助于你对具体应用中的数值变化的理解或者使用）
+
+例子 
+{<<16#12345678:32/big>>,<<16#12345678:32/little>>, <<16#12345678:32/native>>,<<16#12345678:32>>}.
+{<<18,52,86,120>>,<<120,86,52,18>>, <<120,86,52,18>>,<<18,52,86,120>>}     
+
+
+mark 
+file:read_file()
+用~有可能找不到路径
