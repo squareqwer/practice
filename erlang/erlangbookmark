@@ -1,3 +1,68 @@
+emacs 中配置erlang 的开发环境
+
+erlang + emacs + distel-4.03
+
+erlang elisp 
+/erl_HOME/lib/tools-2.6.6.4/emacs
+
+distel-4.03 elisp
+下载distel
+
+在 .emacs 中加入下面的
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Erlang mode
+(add-to-list 'load-path "~/lisp/erlang")
+(setq erlang-root-dir "c:/Program Files/erl5.8.4")
+(setq exec-path (cons "c:/Program Files/erl5.8.4/bin" exec-path))
+(require 'erlang-start)
+
+;; Distel
+;; http://sourceforge.net/projects/distel/
+;;svn checkout http://distel.googlecode.com/svn/trunk/ distel
+(add-to-list 'load-path "c:/Program Files/erl5.8.4/lib/distel-4.03/elisp")
+(require 'distel)
+(distel-setup)
+ 
+;; Some Erlang customizations
+(add-hook 'erlang-mode-hook
+  (lambda ()
+  ;; when starting an Erlang shell in Emacs, default in the node name
+    (setq inferior-erlang-machine-options '("-sname" "emacs"))
+    ;; add Erlang functions to an imenu menu
+    (imenu-add-to-menubar "imenu")))
+;; A number of the erlang-extended-mode key bindings are useful in the shell too
+(defconst distel-shell-keys
+  '(("\C-\M-i"   erl-complete)
+    ("\M-?"      erl-complete) 
+    ("\M-."      erl-find-source-under-point)
+    ("\M-,"      erl-find-source-unwind) 
+    ("\M-*"      erl-find-source-unwind) 
+    )
+  "Additional keys to bind when in Erlang shell.")
+(add-hook 'erlang-shell-mode-hook
+   (lambda ()
+     ;; add some Distel bindings to the Erlang shell
+     (dolist (spec distel-shell-keys)
+       (define-key erlang-shell-mode-map (car spec) (cadr spec)))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 / 永远 小数
 div 整数除法
 rem 整数除法取余数
