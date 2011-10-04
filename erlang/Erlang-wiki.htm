@@ -1,0 +1,1618 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Erlang - 维基百科，自由的百科全书</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="generator" content="MediaWiki 1.17wmf1" />
+<link rel="alternate" type="application/x-wiki" title="编辑本页" href="/w/index.php?title=Erlang&amp;action=edit" />
+<link rel="edit" title="编辑本页" href="/w/index.php?title=Erlang&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://zh.wikipedia.org/apple-touch-icon.png" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (zh)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://zh.wikipedia.org/w/api.php?action=rsd" />
+<link rel="alternate" hreflang="zh" href="/zh/Erlang" />
+<link rel="alternate" hreflang="zh-hans" href="/zh-hans/Erlang" />
+<link rel="alternate" hreflang="zh-hant" href="/zh-hant/Erlang" />
+<link rel="alternate" hreflang="zh-cn" href="/zh-cn/Erlang" />
+<link rel="alternate" hreflang="zh-hk" href="/zh-hk/Erlang" />
+<link rel="alternate" hreflang="zh-sg" href="/zh-sg/Erlang" />
+<link rel="alternate" hreflang="zh-tw" href="/zh-tw/Erlang" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia的Atom" href="/w/index.php?title=Special:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/zh.wikipedia.org/load.php?debug=false&amp;lang=zh&amp;modules=ext%21wikihiero%7Cmediawiki%21legacy%21commonPrint%7Cmediawiki%21legacy%21shared%7Cskins%21vector&amp;only=styles&amp;skin=vector" type="text/css" media="all" />
+<meta name="ResourceLoaderDynamicStyles" content="" /><link rel="stylesheet" href="http://bits.wikimedia.org/zh.wikipedia.org/load.php?debug=false&amp;lang=zh&amp;modules=site&amp;only=styles&amp;skin=vector" type="text/css" media="all" />
+<style type="text/css" media="all">a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: zhwiki:resourceloader:filter:minify-css:5:f2a9127573a22335c2a9102b208c73e7 */</style>
+<script src="http://bits.wikimedia.org/zh.wikipedia.org/load.php?debug=false&amp;lang=zh&amp;modules=startup&amp;only=scripts&amp;skin=vector" type="text/javascript"></script>
+<script type="text/javascript">if ( window.mediaWiki ) {
+	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Erlang", "wgTitle": "Erlang", "wgAction": "view", "wgArticleId": 721006, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 17025976, "wgCategories": ["程式語言", "函数式编程语言"], "wgBreakFrames": false, "wgUserVariant": "zh-cn", "wgRestrictionEdit": [], "wgRestrictionMove": [], "wgSearchNamespaces": [0], "wgVectorEnabledModules": {"collapsiblenav": true, "collapsibletabs": true, "editwarning": true, "expandablesearch": false, "footercleanup": false, "sectioneditlinks": false, "simplesearch": true, "experiments": true}, "wgWikiEditorEnabledModules": {"toolbar": true, "dialogs": true, "templateEditor": false, "templates": false, "addMediaWizard": false, "preview": false, "previewDialog": false, "publish": false, "toc": false}, "wikilove-recipient": "", "wikilove-edittoken": "+\\", "wikilove-anon": 0, "Geo": {"city": "", "country": ""}, "wgNoticeProject": "wikipedia"});
+}
+</script>
+
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/skins-1.17/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr ns-0 ns-subject page-Erlang skin-vector">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- sitenotice -->
+			<div id="siteNotice"><!-- centralNotice loads here --><script type="text/javascript">
+/* <![CDATA[ */
+document.writeln("\x3cdiv id=\"localNotice\"\x3e\x3c/div\x3e");
+/* ]]> */
+</script></div>
+			<!-- /sitenotice -->
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">Erlang</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+				<!-- tagline -->
+				<div id="siteSub">维基百科，自由的百科全书</div>
+				<!-- /tagline -->
+				<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav">
+					跳转到： <a href="#mw-head">导航</a>,
+					<a href="#p-search">搜索</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodytext -->
+				<div class="notice metadata dablink" style="font-size: small;">
+<div>本文介绍的是编程语言Erlang。关于“<b>Erlang</b>”的其他意思，详见“<b><a href="/wiki/Erlang_(%E6%B6%88%E6%AD%A7%E7%BE%A9)" title="Erlang (消歧义)" class="mw-redirect">Erlang (消歧义)</a></b>”。</div>
+</div>
+<table class="infobox" cellspacing="3" style="width: 21em; font-size: 90%; text-align: left;">
+<tr>
+<th colspan="2" style="text-align: center;">Erlang语言</th>
+</tr>
+<tr>
+<th>
+<div style="width: 62px;"><a href="/wiki/%E7%BC%96%E7%A8%8B%E8%8C%83%E5%9E%8B" title="编程范型">编程范型</a></div>
+</th>
+<td><a href="/w/index.php?title=%E5%A4%9A%E8%8C%83%E5%9E%8B%E7%B7%A8%E7%A8%8B%E8%AA%9E%E8%A8%80&amp;action=edit&amp;redlink=1" class="new" title="多范型编程语言">多重典范</a>：<a href="/wiki/%E5%87%BD%E6%95%B8%E5%BC%8F%E7%B7%A8%E7%A8%8B" title="函数式编程" class="mw-redirect">函数式</a>、<a href="/w/index.php?title=%E4%B8%A6%E7%99%BC%E8%A8%88%E7%AE%97&amp;action=edit&amp;redlink=1" class="new" title="并发计算">平行式</a></td>
+</tr>
+<tr>
+<th>
+<div style="width: 62px;">发行时间</div>
+</th>
+<td><a href="/wiki/1987%E5%B9%B4" title="1987年">1987年</a></td>
+</tr>
+<tr>
+<th>
+<div style="width: 62px;">设计者</div>
+</th>
+<td><a href="/wiki/%E6%84%9B%E7%AB%8B%E4%BF%A1" title="爱立信">爱立信</a></td>
+</tr>
+<tr>
+<th>
+<div style="width: 62px;">实作者</div>
+</th>
+<td><a href="/wiki/%E6%84%9B%E7%AB%8B%E4%BF%A1" title="爱立信">爱立信</a></td>
+</tr>
+<tr>
+<th>最新发行时间</th>
+<td valign="bottom">R14A01 (<a href="/wiki/2010%E5%B9%B4" title="2010年">2010年</a><a href="/wiki/6%E6%9C%8816%E6%97%A5" title="6月16日">6月16日</a>)</td>
+</tr>
+<tr>
+<th>
+<div style="width: 62px;">启发语言</div>
+</th>
+<td><a href="/wiki/Prolog" title="Prolog">Prolog</a>、<a href="/wiki/LISP" title="LISP">LISP</a></td>
+</tr>
+<tr>
+<th>
+<div style="width: 62px;">影响语言</div>
+</th>
+<td><a href="/wiki/Scala" title="Scala">Scala</a></td>
+</tr>
+<tr>
+<th>
+<div style="width: 62px;"><a href="/wiki/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1" title="操作系统" class="mw-redirect">操作系统</a></div>
+</th>
+<td>跨平台</td>
+</tr>
+</table>
+<p><b>Erlang</b>是一种通用的平行导向<a href="/wiki/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80" title="编程语言">编程语言</a>，它由<a href="/wiki/%E7%91%9E%E5%85%B8" title="瑞典">瑞典</a>电信设备制造商<a href="/wiki/%E6%84%9B%E7%AB%8B%E4%BF%A1" title="爱立信">爱立信</a>所辖的计算机科学研究室开发，目的是创造一种可以应付大规模开发活动的编程语言和<a href="/w/index.php?title=%E5%9F%B7%E8%A1%8C%E7%92%B0%E5%A2%83&amp;action=edit&amp;redlink=1" class="new" title="执行环境">执行环境</a>。Erlang问世于<a href="/wiki/1987%E5%B9%B4" title="1987年">1987年</a>，经过十年的发展，于<a href="/wiki/1998%E5%B9%B4" title="1998年">1998年</a>发表<a href="/wiki/%E9%96%8B%E6%94%BE%E6%BA%90%E4%BB%A3%E7%A2%BC" title="开放源代码" class="mw-redirect">开放源码</a>版本。Erlang是运作于<a href="/wiki/%E8%99%9A%E6%8B%9F%E6%9C%BA" title="虚拟机" class="mw-redirect">虚拟机</a>的<a href="/wiki/%E7%9B%B4%E8%AD%AF%E5%BC%8F%E8%AA%9E%E8%A8%80" title="直译式语言" class="mw-redirect">直译式语言</a>，但是现在也包含有<a href="/wiki/%E7%83%8F%E6%99%AE%E8%96%A9%E6%8B%89%E5%A4%A7%E5%AD%B8" title="乌普萨拉大学" class="mw-redirect">乌普萨拉大学</a>高性能Erlang计划（HiPE）<sup id="cite_ref-0" class="reference"><a href="#cite_note-0">[1]</a></sup>开发的原生程式码<a href="/wiki/%E7%B7%A8%E8%AD%AF%E5%99%A8" title="编译器">编译器</a>，自R11B-4版本开始，Erlang也支持<a href="/wiki/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80" title="脚本语言">脚本直译器</a>。在<a href="/w/index.php?title=%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88%E5%85%B8%E7%AF%84&amp;action=edit&amp;redlink=1" class="new" title="程式设计典范">程式设计典范</a>上，Erlang属于多重典范编程语言，涵盖<a href="/wiki/%E5%87%BD%E6%95%B8%E5%BC%8F%E7%B7%A8%E7%A8%8B" title="函数式编程" class="mw-redirect">函数式</a>、<a href="/w/index.php?title=%E4%B8%A6%E7%99%BC%E8%A8%88%E7%AE%97&amp;action=edit&amp;redlink=1" class="new" title="并发计算">平行式</a>及<a href="/wiki/%E5%88%86%E5%B8%83%E5%BC%8F%E8%A8%88%E7%AE%97" title="分布式计算" class="mw-redirect">分布式</a>。循序执行的Erlang是一个<a href="/wiki/%E5%8F%8A%E6%97%A9%E6%B1%82%E5%80%BC" title="及早求值">及早求值</a>, <a href="/w/index.php?title=%E5%96%AE%E6%AC%A1%E8%B3%A6%E5%80%BC&amp;action=edit&amp;redlink=1" class="new" title="单次赋值">单次赋值</a>和<a href="/wiki/%E9%A1%9E%E5%9E%8B%E7%B3%BB%E7%B5%B1" title="类型系统">动态资料形态</a>的<a href="/wiki/%E5%87%BD%E6%95%B8%E7%B7%A8%E7%A8%8B%E8%AA%9E%E8%A8%80" title="函数编程语言" class="mw-redirect">函数式编程语言</a>。</p>
+<table id="toc" class="toc">
+<tr>
+<td>
+<div id="toctitle">
+<h2>目录</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.E9.96.8B.E7.99.BC.E5.8F.8A.E6.BC.94.E8.AE.8A.E6.AD.B7.E5.8F.B2"><span class="tocnumber">1</span> <span class="toctext">开发及演变历史</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#.E7.99.BC.E8.A1.8C.E7.89.88.E6.9C.AC"><span class="tocnumber">1.1</span> <span class="toctext">发行版本</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#.E8.AA.9E.E8.A8.80.E7.89.B9.E8.89.B2"><span class="tocnumber">1.2</span> <span class="toctext">语言特色</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#.E8.AA.9E.E8.A8.80.E6.A7.8B.E6.88.90"><span class="tocnumber">2</span> <span class="toctext">语言构成</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#.E8.B3.87.E6.96.99.E6.A0.BC.E5.BC.8F"><span class="tocnumber">2.1</span> <span class="toctext">资料格式</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#.E8.A1.A8.E9.81.94.E5.BC.8F.E6.A0.BC.E5.BC.8F"><span class="tocnumber">2.2</span> <span class="toctext">表达式格式</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#.E5.85.A7.E5.BB.BA.E5.87.BD.E6.95.B8"><span class="tocnumber">2.3</span> <span class="toctext">内建函数</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#.E5.87.BD.E6.95.B8.E5.BC.8F.E7.A8.8B.E5.BC.8F.E8.A8.AD.E8.A8.88"><span class="tocnumber">3</span> <span class="toctext">函数式程式设计</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#.E5.B9.B3.E8.A1.8C.E5.BC.8F.E7.A8.8B.E5.BC.8F.E8.A8.AD.E8.A8.88"><span class="tocnumber">4</span> <span class="toctext">平行式程式设计</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#.E5.B9.B3.E8.A1.8C.E5.B0.8E.E5.90.91.E7.A8.8B.E5.BC.8F.E8.A8.AD.E8.A8.88"><span class="tocnumber">4.1</span> <span class="toctext">平行导向程式设计</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#.E5.AE.B9.E9.8C.AF.E8.99.95.E7.90.86"><span class="tocnumber">4.2</span> <span class="toctext">容错处理</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#.E5.88.86.E6.95.A3.E5.BC.8F.E7.A8.8B.E5.BC.8F.E8.A8.AD.E8.A8.88"><span class="tocnumber">5</span> <span class="toctext">分布式程式设计</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#.E5.85.B6.E4.BB.96.E7.A8.8B.E5.BC.8F.E8.A8.AD.E8.A8.88.E5.85.B8.E7.AF.84"><span class="tocnumber">6</span> <span class="toctext">其他程式设计典范</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#.E6.83.B0.E6.80.A7.E6.B1.82.E5.80.BC"><span class="tocnumber">6.1</span> <span class="toctext">惰性求值</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#.E6.87.89.E7.94.A8"><span class="tocnumber">7</span> <span class="toctext">应用</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#.E5.8F.83.E8.80.83.E8.B3.87.E6.96.99"><span class="tocnumber">8</span> <span class="toctext">参考资料</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#.E5.A4.96.E9.83.A8.E9.8F.88.E6.8E.A5"><span class="tocnumber">9</span> <span class="toctext">外部链接</span></a></li>
+</ul>
+</td>
+</tr>
+</table>
+<h2><span class="editsection">[<a href="/w/index.php?title=Erlang&amp;action=edit&amp;section=1" title="编辑段落“开发及演变历史”">编辑</a>]</span> <span class="mw-headline" id=".E9.96.8B.E7.99.BC.E5.8F.8A.E6.BC.94.E8.AE.8A.E6.AD.B7.E5.8F.B2">开发及演变历史</span></h2>
+<p>Erlang得名于<a href="/wiki/%E4%B8%B9%E9%BA%A5" title="丹麦" class="mw-redirect">丹麦</a><a href="/wiki/%E6%95%B8%E5%AD%B8%E5%AE%B6" title="数学家" class="mw-redirect">数学家</a>及<a href="/wiki/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AE%B6" title="统计学家" class="mw-redirect">统计学家</a>Agner Krarup <i>Erlang</i>，同时Erlang还可以表示<i>Er</i>icsson <i>Lang</i>uage。Erlang语言由瑞典爱立信电信公司的Joe Armstrong开始设计，开始于公元一九八零年代。最初是以<a href="/wiki/Prolog" title="Prolog">Prolog</a>编程语言为基础，几度改版之后，改成以Joe's Abstract Machine为基础的独立语言执行环境。虽然语言风格仍与<a href="/wiki/Prolog" title="Prolog">Prolog</a>相近，不过因Erlang语言设计的走向，Erlang成为具备函数语言特色的编程语言<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[2]</a></sup>。</p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Erlang&amp;action=edit&amp;section=2" title="编辑段落“发行版本”">编辑</a>]</span> <span class="mw-headline" id=".E7.99.BC.E8.A1.8C.E7.89.88.E6.9C.AC">发行版本</span></h3>
+<p><a href="/wiki/1998%E5%B9%B4" title="1998年">1998年</a>起，Erlang发布<a href="/wiki/%E9%96%8B%E6%94%BE%E6%BA%90%E4%BB%A3%E7%A2%BC" title="开放源代码" class="mw-redirect">开放源码</a>版本，称为<a href="http://en.wikipedia.org/wiki/Open_Telecom_Platform" class="external text" rel="nofollow">开源电信平台</a>。<b>开源电信平台</b>采用修改过的<a href="/wiki/Mozilla%E5%85%AC%E5%85%B1%E8%A8%B1%E5%8F%AF%E8%AD%89" title="Mozilla公共许可证" class="mw-redirect">Mozilla公共许可证</a>协议发放，同时爱立信仍然提供商业版本的技术支持。目前，Erlang最大的商业用户是爱立信，其他知名用户有<a href="/wiki/%E5%8C%97%E7%94%B5%E7%BD%91%E7%BB%9C" title="北电网络">北电网络</a>、<a href="/wiki/Amazon.com" title="Amazon.com">亚玛逊</a>以及<a href="/wiki/T-Mobile" title="T-Mobile">T-Mobile</a>等<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[3]</a></sup>。</p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Erlang&amp;action=edit&amp;section=3" title="编辑段落“语言特色”">编辑</a>]</span> <span class="mw-headline" id=".E8.AA.9E.E8.A8.80.E7.89.B9.E8.89.B2">语言特色</span></h3>
+<ul>
+<li><b>平行导向程式设计</b> 在语言中，可以借由spawn/*函数，将特定的函数设定为独立的行程，之后可以做跨行程通讯。</li>
+<li><b>函数式程式设计</b> 由于Erlang早期以Prolog开发制成，受语言特性影响，即成为函数式语言。</li>
+<li><b>单次赋值</b> 每个变量只能跟资料绑一次，所以，不像一般编程语言的变量可以多次指定为不同的值。单次赋值的好处是状态单纯，使程式容易阅读。</li>
+<li><b><a href="/wiki/%E5%8F%8A%E6%97%A9%E6%B1%82%E5%80%BC" title="及早求值">及早求值</a>或严格求值</b> Erlang基本求值策略为电脑语言中及早求值之特性。而且，可以借由明确使用无参数的λ演算式，将特定函数设定为惰性求值策略。</li>
+<li><b>动态资料型态与类型系统</b> 有编译时期的型态检查系统支援。</li>
+<li><b><a href="/w/index.php?title=Fail-fast&amp;action=edit&amp;redlink=1" class="new" title="Fail-fast">错误先发</a></b> 在执行时期发生的错误，会由错误位置送出讯息，发生错误的行程立刻停止动作。借由行程链通机制，可以自动传递错误、捕捉错误，使其他行程能够帮助处理错误。</li>
+<li><b>程式码热更新</b> 由于Erlang是函数语言，可以撰写特定的程式结构，制作即时更换新版函数的机制。</li>
+<li><b>脚本语言</b> Erlang实作提供了脚本执行方式。</li>
+</ul>
+<h2><span class="editsection">[<a href="/w/index.php?title=Erlang&amp;action=edit&amp;section=4" title="编辑段落“语言构成”">编辑</a>]</span> <span class="mw-headline" id=".E8.AA.9E.E8.A8.80.E6.A7.8B.E6.88.90">语言构成</span></h2>
+<p>Erlang程式结构以函数定义为主。函数是一组将输入分别对应到输出的规则，对应方式遵守<a href="/wiki/%E5%87%BD%E6%95%B8" title="函数" class="mw-redirect">数学函数的惯例</a>。此外，Erlang语言由几项构句要素所组成，包括<a href="/wiki/%E6%96%87%E5%AD%97_(%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91)" title="文字 (数理逻辑)">文字(或称原子)</a>、数字、列表、<a href="/wiki/%E5%A4%9A%E5%85%83%E7%BB%84" title="多元组">值组</a>、字符、字串、二进制资料、模组、与特定用途的关键字如fun ... end, if ... end, case ... of ... end, spawn,&#160;!, receive ... end等等。以下段落分别列示并举例说明Erlang程式的基本构成部份，涵盖<b>资料格式</b>、<b>表达式格式</b>与<b>内建函数</b>。</p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Erlang&amp;action=edit&amp;section=5" title="编辑段落“资料格式”">编辑</a>]</span> <span class="mw-headline" id=".E8.B3.87.E6.96.99.E6.A0.BC.E5.BC.8F">资料格式</span></h3>
+<table class="wikitable">
+<tr>
+<th width="110">类型</th>
+<th>意义与构词规则</th>
+<th width="240">例子</th>
+</tr>
+<tr>
+<td>原子</td>
+<td>原子是基本资料单元，以一般文字构成。构词规则有：
+<ol>
+<li>以小写英文字符开头、不包含空白的连续文字。</li>
+<li>以单引号包含的任意连续文字。</li>
+</ol>
+</td>
+<td>
+<ul>
+<li>hello</li>
+<li>'Hello, World!'</li>
+<li>true</li>
+<li>a3b</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>数字</td>
+<td>数字是基本资料单元，可以是整数或实数。
+<ol>
+<li>连续数字符号。</li>
+<li>包含一个小数点的连续数字符号，并不以小数点开头也不以小数点结尾。</li>
+<li>符合前二项原则，并以 + 或 - 符号开头。</li>
+</ol>
+</td>
+<td>
+<ul>
+<li>302</li>
+<li>3.1416</li>
+<li>+1</li>
+<li>-2</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>列表</td>
+<td>列表是与<a href="/wiki/%E9%80%A3%E7%B5%90%E4%B8%B2%E5%88%97" title="连结串行" class="mw-redirect">链接序列</a>相同的数据结构。任一列表大致区分为头部与尾部，头部是列表的第一项，尾部是列表除第一项之外的其他部份。
+<ol>
+<li>左边以 [ 、右边以 ] 符号，包含一串以逗号分隔的零或多项构句要素。</li>
+<li>符合前项原则，当存在任一 | 符号时， | 的左边有一串逗号分隔的构句要素， | 的右边只有一个构句要素。</li>
+</ol>
+</td>
+<td>
+<ul>
+<li>[]</li>
+<li>[1,2,3]</li>
+<li>[ [1],2|[] ]</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>值组</td>
+<td>值组是将二个、三个或多个资料放在一起的数据结构。
+<ul>
+<li>左边以 { 、右边以 } 符号，包含一串以逗号分隔的零或多项构句要素。</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>{}</li>
+<li>{{1},2}</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>字符</td>
+<td>Erlang将字符存为32位元的整数。
+<ol>
+<li>任何可见的字符，以 $ 开头、后接该字符符号，即表示字符本身。</li>
+<li>任何不可见的字符，可使用以 $ 开头、后接该字符符号的<a href="/wiki/%E8%BD%AC%E4%B9%89%E5%BA%8F%E5%88%97" title="转义序列">逸出序列</a>表达。</li>
+</ol>
+</td>
+<td>
+<ul>
+<li>$3</li>
+<li>$)</li>
+<li>$\012</li>
+<li>$\x0A</li>
+<li>$\n</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>字串</td>
+<td>Erlang将字串视同一列整数列表。
+<ol>
+<li>以双引号包含任意多个文字，即为字串。</li>
+<li>以一列整数列表表达，使其中每个整数项目都落在合理的字符的值范围，此列也是字串。</li>
+</ol>
+</td>
+<td>
+<ul>
+<li>"Hello, World!"</li>
+<li>[65,66,67]</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>二进制资料</td>
+<td>以左边 &lt;&lt; 、右边 &gt;&gt; 符号，包含由<a href="http://www.erlang.org/doc/reference_manual/expressions.html#bit_syntax" class="external text" rel="nofollow">位元语法</a>表示的资料。</td>
+<td>
+<ul>
+<li>&lt;&lt;"Hello, World!"&gt;&gt;</li>
+<li>&lt;&lt;65:8,66:8,67:8&gt;&gt;</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>函数识别项</td>
+<td>Erlang容许用文字表示函数识别项，使程式中可以对指定函数做函数呼叫，或者当做资料传递。函数识别项格式为：
+<ul>
+<li>fun 函数名称/参数数目</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>fun a_function/3</li>
+</ul>
+<p>用途见以下“函数式程式设计”小节。</p>
+</td>
+</tr>
+<tr>
+<td>程序代号</td>
+<td>Erlang容许以内建函数erlang:spawn/3、erlang:spawn/4、erlang:spawn/1、erlang:spawn/2等等，将指定函数启动为一个程序。程序启动之后，Erlang以左边 &lt; 、右边 &gt; ，包含一个数字和点号组成的编号，表示此程序代号。</td>
+<td>见以下“平行式程式设计”小节。</td>
+</tr>
+<tr>
+<td>模组</td>
+<td>Erlang容许将一些程式整理为一个模组。模组的设定，是在源码档案开头书写模组标记，格式为：
+<pre>
+-module(模組名稱).
+-export( [ 函數名稱/參數數目 , 函數名稱/參數數目 , ... ] ).
+-import( 模組名稱, [ 函數名稱/參數數目 , 函數名稱/參數數目 , ... ] ).
+</pre>
+<p>模组名称和函数名称都是原子。 -module(模组名称) 定义模组的名字，要与档名相同。 -export( ... ) 定义模组释出的函数，模组内的任何函数必须要释出才能让外部透过模组呼叫该函数。 -import( ... ) 定义本模组要从其他模组汇入哪些函数，以便本模组自己使用。另外，为了方便程式的撰写并测试，还容许 -compile(export_all) 定义本模组的所有函数全部对外释出。</p>
+<pre>
+-compile(export_all).
+</pre></td>
+<td>(略)</td>
+</tr>
+<tr>
+<td>宏</td>
+<td>宏是将一项资料以另一个文字做为代名。
+<ul>
+<li>定义宏的语法是：</li>
+</ul>
+<pre>
+-define ( 代名 , 資料 ).
+</pre>
+<ul>
+<li>使用宏的语法是：</li>
+</ul>
+<pre>
+? 代名
+</pre>
+<ul>
+<li>Erlang有一些内定语法，例如模组名称为</li>
+</ul>
+<pre>
+?MODULE
+</pre></td>
+<td>
+<ul>
+<li>-define(hello, world).</li>
+</ul>
+<dl>
+<dd>test() -&gt;&#160;?hello.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<h3><span class="editsection">[<a href="/w/index.php?title=Erlang&amp;action=edit&amp;section=6" title="编辑段落“表达式格式”">编辑</a>]</span> <span class="mw-headline" id=".E8.A1.A8.E9.81.94.E5.BC.8F.E6.A0.BC.E5.BC.8F">表达式格式</span></h3>
+<table class="wikitable">
+<tr>
+<th width="110">类型</th>
+<th>构词规则</th>
+<th width="240">例子</th>
+</tr>
+<tr>
+<td>变量</td>
+<td>
+<p>变量是一种提供与资料绑定、赋值的词汇。Erlang的变量是单一赋值，一个变量只能赋值一次。</p>
+<ol>
+<li>以大写英文字符开头的任意连续文字，是具名变量。</li>
+<li>以 _ 开头的任意连续文字，是匿名变量，用于变量必须使用、但相对的值可以忽略的场合。</li>
+</ol>
+</td>
+<td>
+<ul>
+<li>Number1</li>
+<li>_</li>
+<li>_nothing</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>样式匹配</td>
+<td>
+<ol>
+<li>样式是指以原子、列表或值组表达的结构，结构中可能包含一些未赋值的变量。</li>
+<li>给二个样式 A 和 B ，样式匹配是用 A = B 表示法，表示要让 A 对 B 匹配。如果匹配成功， A 包含的未赋值变量都会赋值，并且传回 B 的值。</li>
+</ol>
+</td>
+<td>
+<ul>
+<li>A = 42</li>
+<li>{ok, Node} = {ok, 'Wikipedia'}</li>
+<li>[H|T] = [1,2,3]</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>函数</td>
+<td>
+<p>函数是由一或多项对应规则组成。每一项规则是将一部份匹配样式的输入映射到相对的输出。</p>
+<ul>
+<li>规则：格式为</li>
+</ul>
+<pre>
+  原子 ( 變數 , 變數 , ... ) -&gt; 表達式 , 表達式 , ...
+在 -&gt; 左邊是函數名稱及搭配的參數列，右邊為函數本體。
+</pre>
+<ul>
+<li>函数：格式为</li>
+</ul>
+<pre>
+  規則 ; 規則 ; ... ; 規則 .
+以分號分隔一或多項規則，並最後以句號結束。
+同一函數的每一規則必須以相同的原子開頭，並接受相同數量的
+參數列。
+</pre>
+<p>函数被呼叫时，会让呼叫方依序对被呼叫方的每一条函数规则做样式匹配，比对函数名称、参数数目、参数样式等等。首先完成匹配的函数规则会被执行，并且后面的函数规则会被忽略。</p>
+</td>
+<td>见以下“函数式程式设计”小节</td>
+</tr>
+<tr>
+<td>函数呼叫</td>
+<td>格式为
+<pre>
+  原子 ( 資料 , 資料 , ... )
+表示函數名稱及搭配的參數列。呼叫符合函數名稱及
+相同參數數目的函數。
+</pre>
+<p>函数呼叫时，所给予的参数可能是已赋值的变量。并且，如果参数是变量，必须是已赋值的变量。</p>
+</td>
+<td>见以下“函数式程式设计”小节</td>
+</tr>
+<tr>
+<td>真值比较</td>
+<td>
+<ul>
+<li>比较运算：</li>
+</ul>
+<dl>
+<dd>
+<table>
+<tr>
+<td>==</td>
+<td>相等</td>
+</tr>
+<tr>
+<td>/=</td>
+<td>不相等</td>
+</tr>
+<tr>
+<td>=&lt;</td>
+<td>小于或等于</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>小于</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>大于或等于</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>大于</td>
+</tr>
+<tr>
+<td>=:=</td>
+<td>确实相等</td>
+</tr>
+<tr>
+<td>=/=</td>
+<td>确实不相等</td>
+</tr>
+</table>
+</dd>
+</dl>
+<ul>
+<li>真值运算：</li>
+</ul>
+<dl>
+<dd>
+<table>
+<tr>
+<td>not</td>
+<td>非</td>
+</tr>
+<tr>
+<td>and</td>
+<td>且</td>
+</tr>
+<tr>
+<td>or</td>
+<td>或</td>
+</tr>
+<tr>
+<td>xor</td>
+<td>非此即彼</td>
+</tr>
+<tr>
+<td>orelse</td>
+<td>或 (<a href="/wiki/%E7%9F%AD%E8%B7%AF%E6%B1%82%E5%80%BC" title="短路求值">捷径求值</a>)</td>
+</tr>
+<tr>
+<td>andalso</td>
+<td>且 (捷径求值)</td>
+</tr>
+</table>
+</dd>
+</dl>
+<p>真值比较的结果，如果成功则传回true原子，失败则传回false原子。</p>
+<p>请记得，Erlang是以true和false表示<a href="/wiki/%E5%B8%83%E5%B0%94%E5%9E%8B" title="布尔型">布尔资料类型</a>。</p>
+</td>
+<td>(略)</td>
+</tr>
+<tr>
+<td>运算子</td>
+<td>Erlang提供常用的运算子方便基本运算。运算子是用在<b>中序</b>的表达式里，包含 + - * / div(商) rem(余) 等。位元算算有 bnot, band, bor, bxor, bsl(算术左移), bsr(算术右移) 等。用于列表有 ++(列表衔接) --(列表剔除) 等。各种运算式皆可用 ( ) 调整运算优先级。</td>
+<td>(略)</td>
+</tr>
+<tr>
+<td><a href="http://en.wikipedia.org/wiki/Guard_(computing)" class="external text" rel="nofollow">防卫式</a></td>
+<td>
+<p>防卫式是接在when关键字之后的一组表达式，借由防卫式的真伪值做程控处理。 防卫式的原则如下方所述：</p>
+<ol>
+<li>代表true或false的变量或原子，是防卫式。</li>
+<li>任何真值运算式，包括比较算式和逻辑算式，是防卫式。</li>
+<li>传回true或false的函数呼叫，是防卫式。</li>
+<li>以逗号分隔的多个防卫式，是防卫式。</li>
+</ol>
+</td>
+<td>
+<ul>
+<li>false</li>
+<li>A =&lt; 10</li>
+<li>erlang:is_number(N), erlang:is_atom(A)</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>受防卫式限制的函数</td>
+<td>
+<p>函数对应规则格式为：</p>
+<pre>
+  原子 ( 變數 , 變數 , ... ) -&gt; 表達式 , 表達式 , ...
+</pre>
+<p>若一条函数规则加上防卫式，此规则的处理范围会多一些限制。受防卫式限制的函数对应规则格式为：</p>
+<pre>
+  原子 ( 變數 , 變數 , ... ) when 防衛式 -&gt; 表達式 , 表達式 , ...
+</pre></td>
+<td>
+<ul>
+<li>atom_pair(A, B) when is_atom(A), is_atom(B) -&gt; {A, B}.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>行后注解</td>
+<td>任何&#160;% 符号开头，往后到行尾的文字皆为注解文字。</td>
+<td>'H.W.'.&#160;% Hello, World!</td>
+</tr>
+<tr>
+<td><a href="/wiki/%CE%9B%E6%BC%94%E7%AE%97" title="Λ演算">λ演算式</a></td>
+<td>
+<p>λ演算式是匿名函数，在Erlang以 fun ... end 关键字叙述。格式为：</p>
+<pre>
+fun ( 變數 , 變數 , ... ) -&gt; 表達式 , 表達式 , ... end
+</pre>
+<p>使用无参数的λ演算式，可以做出<a href="/wiki/%E6%83%B0%E6%80%A7%E6%B1%82%E5%80%BC" title="惰性求值">惰性求值</a>的效果。</p>
+</td>
+<td>
+<ul>
+<li>(<i>fun(X)-&gt;X&gt;0 end</i>)(1).</li>
+</ul>
+<dl>
+<dd>% (λ x . x &gt; 0) 1</dd>
+</dl>
+<ul>
+<li>lists:takewhile(</li>
+</ul>
+<dl>
+<dd><i>fun(X)-&gt;</i></dd>
+<dd><i>X&gt;0 and X=&lt;10 end</i>,</dd>
+<dd>[1,5,11]).</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td>因果式</td>
+<td>
+<p>使用 if ... end 关键字叙述条件判断原则。格式为：</p>
+<pre>
+if 防衛式 -&gt; 表達式, 表達式, ... ;
+   防衛式 -&gt; 表達式, 表達式, ... ;
+   ......
+   防衛式 -&gt; 表達式, 表達式, ...
+end
+</pre></td>
+<td>
+<ul>
+<li>parse(A) -&gt;</li>
+</ul>
+<dl>
+<dd>if
+<dl>
+<dd>is_number(A),</dd>
+<dd>round(A) == A,</dd>
+<dd>A &gt;= 0 -&gt;
+<dl>
+<dd>{natural, A};</dd>
+</dl>
+</dd>
+<dd>is_number(A) -&gt;
+<dl>
+<dd>{real, A};</dd>
+</dl>
+</dd>
+<dd>is_atom(A) -&gt;
+<dl>
+<dd>{word, A};</dd>
+</dl>
+</dd>
+<dd>true -&gt;
+<dl>
+<dd>{unknown, A}</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dd>end.</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td>案例式</td>
+<td>
+<p>使用 case ... of ... end 关键字，根据一个变量的案例，带往相对的处理程序。格式为：</p>
+<pre>
+case 表達式 of
+   樣式 -&gt; 表達式, 表達式, ... ;
+   樣式 -&gt; 表達式, 表達式, ... ;
+   ......
+   樣式 -&gt; 表達式, 表達式, ...
+end
+</pre>
+<ul>
+<li>样式之后可接when防卫式。</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>show(A) -&gt;</li>
+</ul>
+<dl>
+<dd>case A of
+<dl>
+<dd>{natural, N} -&gt;
+<dl>
+<dd>io:format("Natural number ~.10B is met.~n", [N]);</dd>
+</dl>
+</dd>
+<dd>{real, R} -&gt;
+<dl>
+<dd>io:format("Real number ~f is met.~n", [R]);</dd>
+</dl>
+</dd>
+<dd>{word, W} -&gt;
+<dl>
+<dd>io:format("\"~w\" is met.~n", [W]);</dd>
+</dl>
+</dd>
+<dd>{unknown, U} -&gt;
+<dl>
+<dd>io:format("Unknown structure ~w.~n", [U])</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dd>end.</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td>试误</td>
+<td>
+<p>使用 try ... catch ... end 关键字叙述试误的情况与结果。格式为：</p>
+<pre>
+try 表達式 of
+   樣式 -&gt; 表達式, 表達式, ... ;
+   樣式 -&gt; 表達式, 表達式, ... ;
+   ......
+   樣式 -&gt; 表達式, 表達式, ...
+catch
+   樣式(例外) -&gt; 表達式, 表達式, ... ;
+   樣式(例外) -&gt; 表達式, 表達式, ... ;
+   ......
+   樣式(例外) -&gt; 表達式, 表達式, ...
+after
+   表達式, 表達式, ...
+end
+</pre>
+<ul>
+<li>不需要使用after段落时，可省略after段落。</li>
+<li>样式之后可接when防卫式。</li>
+</ul>
+</td>
+<td>(略)</td>
+</tr>
+<tr>
+<td>接收讯息</td>
+<td>
+<p>每个Erlang程式执行时，都可以从自己程序的邮箱中取得由其他程序送到的讯息。可以使用 receive ... end 关键字接收讯息，格式为：</p>
+<pre>
+receive
+   樣式 -&gt; 表達式, 表達式, ... ;
+   樣式 -&gt; 表達式, 表達式, ... ;
+   ......
+   樣式 -&gt; 表達式, 表達式, ...
+end
+</pre>
+<ul>
+<li>样式之后可接when防卫式。</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>loop(FromPid, Result) -&gt;</li>
+</ul>
+<dl>
+<dd>receive
+<dl>
+<dd>{FromPid, stop} -&gt;
+<dl>
+<dd>Result;</dd>
+</dl>
+</dd>
+<dd>{FromPid, Any} -&gt;
+<dl>
+<dd>loop(FromPid, [Any|Result])</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dd>end.</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td>发送讯息</td>
+<td>
+<p>Erlang容许向程序传送讯息。使用&#160;! 关键字，格式为：</p>
+<pre>
+程序代號 ! 訊息
+</pre>
+<ul>
+<li>讯息可以是各种资料格式。讯息资料格式可以是用各种表达式求出的值。</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Pid = erlang:spawn(</li>
+</ul>
+<dl>
+<dd>fun() -&gt;
+<dl>
+<dd>receive
+<dl>
+<dd>X -&gt; X</dd>
+</dl>
+</dd>
+<dd>end</dd>
+</dl>
+</dd>
+<dd>end)
+<ul>
+<li>以上产生一个程序。</li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li>Pid&#160;! {hello, world}</li>
+</ul>
+<dl>
+<dd>
+<ul>
+<li>以上对Pid送出讯息。</li>
+</ul>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td><a href="http://en.wikipedia.org/wiki/List_comprehension" class="external text" rel="nofollow">列表解析</a></td>
+<td>列表解析，是提供快速建立列表的语法。语法等同于<a href="http://en.wikipedia.org/wiki/Set-builder_notation" class="external text" rel="nofollow">集合建构式</a>。格式为：
+<ul>
+<li>[ 变量(表达式中的元素) || 变量(表达式中的元素) &lt;- 表达式 , 防卫式 ]</li>
+</ul>
+<dl>
+<dd>若无防卫条件，列表解析中不写防卫式。</dd>
+</dl>
+</td>
+<td>
+<ul>
+<li>[ X || X &lt;- [1,2,3] ]</li>
+</ul>
+<dl>
+<dd>运算结果为[1,2,3]</dd>
+</dl>
+</td>
+</tr>
+</table>
+<h3><span class="editsection">[<a href="/w/index.php?title=Erlang&amp;action=edit&amp;section=7" title="编辑段落“内建函数”">编辑</a>]</span> <span class="mw-headline" id=".E5.85.A7.E5.BB.BA.E5.87.BD.E6.95.B8">内建函数</span></h3>
+<p><b>Erlang / 开源电信平台</b>包括一个Erlang直译器、一个Erlang编译器、程序节点通讯协定、<a href="/wiki/CORBA" title="CORBA">CORBA</a>、一个分布式数据库<a href="http://en.wikipedia.org/wiki/Mnesia" class="external text" rel="nofollow">Mnesia</a>、以及许多程式库<sup id="cite_ref-OTP_3-0" class="reference"><a href="#cite_note-OTP-3">[4]</a></sup>。 <b>内建函数</b>涵盖了各种方面的功能，涵盖了系统命令、资料存取、格式转换、网络通讯、图形接口、 ... 等。以下列表介绍几项常用的Erlang内建函数。(参阅<a href="http://www.erlang.org/doc/" class="external text" rel="nofollow">文件</a>或<a href="http://www.erlang.org/doc/man_index.html" class="external text" rel="nofollow">索引</a>)</p>
+<table class="wikitable">
+<tr>
+<th width="200">模组:函数名称 / 参数数目</th>
+<th>用途</th>
+</tr>
+<tr>
+<td>c:cd / 1</td>
+<td>
+<p>切换到指定目录位置。</p>
+<pre>
+&gt; c:cd("D:\\code").
+D:/code/
+ok
+</pre>
+<p>当指定目录不正确时，则保持在原目录位置。</p>
+</td>
+</tr>
+<tr>
+<td>c:c / 1</td>
+<td>
+<p>编译指定的程式码，之后加载新编译好的程式。</p>
+<pre>
+&gt; c:c(test). % test.erl 必須存在於目錄位置
+{ok, test}
+&gt; c:c(test1).
+./test1.erl:none: ...
+error
+</pre></td>
+</tr>
+<tr>
+<td>io:format / 2</td>
+<td>
+<p>按照指定的格式文字将资料印在标准输出埠。</p>
+<pre>
+&gt; io:format("~.8B, ~c, ~s, ~.2f~n", [32, $a, "hello", 3.1416]).
+40, a, hello, 3.14
+ok
+</pre></td>
+</tr>
+<tr>
+<td>lists:sublist / 3</td>
+<td>
+<p>由列表中撷取子列表。Erlang字串是整数列表，于是本函数视同撷取子字串。</p>
+<pre>
+&gt; lists:sublist("Hello, World!", 2, 2).  
+"el"
+</pre></td>
+</tr>
+</table>
+<h2><span class="editsection">[<a href="/w/index.php?title=Erlang&amp;action=edit&amp;section=8" title="编辑段落“函数式程式设计”">编辑</a>]</span> <span class="mw-headline" id=".E5.87.BD.E6.95.B8.E5.BC.8F.E7.A8.8B.E5.BC.8F.E8.A8.AD.E8.A8.88">函数式程式设计</span></h2>
+<p>Erlang支持<a href="/wiki/%E5%87%BD%E6%95%B8%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80" title="函数编程语言">函数式程式设计</a>的一般特色，特色包括<a href="/w/index.php?title=%E5%96%AE%E6%AC%A1%E8%B3%A6%E5%80%BC&amp;action=edit&amp;redlink=1" class="new" title="单次赋值">单次赋值</a>、<a href="/wiki/%E9%80%92%E5%BD%92" title="递归">递回</a>定义、<a href="/wiki/%CE%9B%E6%BC%94%E7%AE%97" title="Λ演算">λ演算</a>与<a href="/wiki/%E9%AB%98%E9%9A%8E%E5%87%BD%E6%95%B8" title="高阶函数" class="mw-redirect">高阶函数</a>等等。Erlang函数大致写法如下，以整数<a href="/wiki/%E9%9A%8E%E4%B9%98" title="阶乘">阶乘</a>模组为例：</p>
+<pre>
+<b>-module</b>(fact).
+<b>-export</b>([fac/1]).
+
+fac(N) <b>when</b> N &gt; 1 -&gt;
+    N * fac(N-1);
+fac(1) -&gt;
+    1.
+</pre>
+<p>以下是<a href="/wiki/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F" title="快速排序">快速排序</a>算法的Erlang实作：</p>
+<pre>
+<i>%% quicksort:qsort(List)</i>
+<i>%% Sort a list of items</i>
+<b>-module</b>(quicksort).
+<b>-export</b>([qsort/1]).
+
+qsort([]) -&gt; [];
+qsort([Pivot|Rest]) -&gt;
+    qsort([ X || X &lt;- Rest, X &lt;= Pivot]) ++ [Pivot] ++ qsort([ Y || Y &lt;- Rest, Y &gt; Pivot]).
+</pre>
+<p>以下是<a href="/wiki/%E8%B2%BB%E6%B0%8F%E6%95%B8%E5%88%97" title="费氏数列" class="mw-redirect">费氏数列</a>求解函数：</p>
+<pre>
+<b>-module</b>(example).
+<b>-export</b>([fibo/1]).
+
+fibo(N) <b>when</b> N &gt; 1 -&gt;
+    fibo(N-1) + fibo(N-2);
+fibo(1) -&gt;
+    1;
+fibo(0) -&gt;
+    0.
+</pre>
+<pre>
+&gt; c(example).
+{ok,example}
+&gt; lists:map(fun(X)-&gt;<b>test:fibo</b>(X) end, lists:seq(1,10)).
+[1,1,2,3,5,8,13,21,34,55]
+</pre>
+<p>函数式程式设计难免以递回计算，而消耗了大量递回堆栈空间。为了克服这个问题，一般使用<b>累积参数</b>与<b>尾端递回</b>等技巧节省递回数目：如以下例子。</p>
+<pre>
+<b>-module</b>(test).
+<b>-export</b>([fibo_accu/1]).
+
+fibo_accu(N) -&gt;
+    fibo(N, 0, 1).
+fibo(N, C1, C2) <b>when</b> N &gt; 2 -&gt;
+    fibo(N-1, C2, C1+C2);
+fibo(0, _, _) -&gt;
+    0;
+fibo(1, _, _) -&gt;
+    1;
+fibo(_, C1, C2) -&gt;
+    C1+C2.
+</pre>
+<pre>
+&gt; c(example).
+{ok,test}
+&gt; lists:map(fun(X)-&gt;<b>test:fibo_accu</b>(X) end, lists:seq(1,10)).
+[1,1,2,3,5,8,13,21,34,55]
+</pre>
+<p>函数式程式设计容许使用<a href="/wiki/%E9%AB%98%E9%9A%8E%E5%87%BD%E6%95%B8" title="高阶函数" class="mw-redirect">高阶函数</a>求解。以下例子说明Erlang实做<a href="/wiki/%E5%A4%8D%E5%90%88%E5%87%BD%E6%95%B0" title="复合函数">复合函数</a>。 ( f o g ，念作 f <i>after</i> g 。)</p>
+<pre>
+'After'(F, G) -&gt;
+     fun(X) -&gt;
+         erlang:apply(F, [erlang:apply(G, [X])])
+     end.
+</pre>
+<dl>
+<dd>
+<ul>
+<li>请注意<b>after</b>是Erlang关键字。因此，以上函数命名为′<i>After</i>′避开关键字。</li>
+</ul>
+</dd>
+</dl>
+<pre>
+&gt; (<b>example:'After'</b>(fun test:show/1, fun test:parse/1))(3.1416).
+Real number 3.141600 is met.
+ok
+</pre>
+<h2><span class="editsection">[<a href="/w/index.php?title=Erlang&amp;action=edit&amp;section=9" title="编辑段落“平行式程式设计”">编辑</a>]</span> <span class="mw-headline" id=".E5.B9.B3.E8.A1.8C.E5.BC.8F.E7.A8.8B.E5.BC.8F.E8.A8.AD.E8.A8.88">平行式程式设计</span></h2>
+<p>Erlang最主要的特色是<b>平行导向程式设计</b>，强调多程序平行运作，并且以讯息对彼此沟通。Erlang提供了<b>spawn</b>函数和 <b>!</b> 、 <b>receive</b> ... <b>end</b> 等关键字，可以描述在Erlang/开源电信平台中的如何启动一些程序、并且如何让程序传递讯息。此外，<b>平行导向程式设计</b>的精神还强调程序的容错处理，借由程序发生错误时的讯息传递，使其他程序可以得知错误的发生，使方便于后续处理。以下分别介绍平行导向程式设计的一般程式撰写方式，以及错误处理的使用方式。</p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Erlang&amp;action=edit&amp;section=10" title="编辑段落“平行导向程式设计”">编辑</a>]</span> <span class="mw-headline" id=".E5.B9.B3.E8.A1.8C.E5.B0.8E.E5.90.91.E7.A8.8B.E5.BC.8F.E8.A8.AD.E8.A8.88">平行导向程式设计</span></h3>
+<p>基本的平行程式示范如下：</p>
+<ul>
+<li>以下启动一个程序。</li>
+</ul>
+<pre>
+<i>% create process and call the function web:start_server(Port, MaxConnections)</i>
+ServerProcess = <b>spawn</b>(web, start_server, [Port, MaxConnections]),
+</pre>
+<ul>
+<li>以下是在任何程式中，对先前起动的程序送一则讯息 {<i>pause</i>, <i>10</i>} 。</li>
+</ul>
+<pre>
+<i>% send the {pause, 10} message (a tuple with an atom "pause" and a number "10")</i>
+<i>% to ServerProcess (asynchronously)</i>
+ServerProcess ! {pause, 10},
+
+</pre>
+<ul>
+<li>以下是一段接收讯息的程式。每个程序都拥有一份邮箱，可伫留收到的讯息； receive ... end 程式片断是从程序的邮箱中取出最早伫留的讯息。</li>
+</ul>
+<pre>
+<i>% receive messages sent to this process</i>
+<b>receive</b>       
+        a_message -&gt; do_something; 
+        {data, DataContent} -&gt; handle(DataContent);
+        {hello, Text} -&gt; io:format("Got hello message: ~s", [Text]);
+        {goodbye, Text} -&gt; io:format("Got goodbye message: ~s", [Text])
+<b>end</b>.
+
+收到 <i>a_message</i> 結果就是 <i>do_something</i> ；收到 {<i>data</i>, <i>DataContent</i>} 結果會呼叫 handle(DataContent) ；
+收到 {<i>hello</i>, <i>Text</i>} 結果教是印出 "Got hello message: ..." ，收到 {<i>goodbye</i>, <i>Text</i>} 結果是印出
+"Got goodbye message: ..." 。
+</pre>
+<p>以下程式，示范产生一组环状传递讯息的程序。</p>
+<pre>
+ring_proc(Funs) -&gt;
+    Ns = lists:seq(1, length(Funs)),
+    [P|Pids] = [ <b>spawn</b>(<i>?MODULE</i>, lists:nth(Nth,Funs),[]) || Nth &lt;- Ns ],
+    [ Pid ! ToPid || {Pid, ToPid} &lt;- lists:zip([P|Pids], Pids++[P]) ]. 
+
+func() -&gt;
+    <b>receive</b>
+        ToPid -&gt;
+            func_msg_(ToPid)
+    <b>end</b>.
+
+func_msg_(ToPid) -&gt;
+    <b>receive</b>
+        stop -&gt;
+            io:format("Stop process ~w~n", [self()]),
+            ToPid ! stop;
+        Message -&gt;
+            io:format("~w: transmit message to ~w~n", [self(), ToPid]),
+            ToPid ! Message,
+            func_msg_(ToPid)
+    <b>end</b>.
+
+接收<i>stop</i>訊息，就對下一個程序送<i>stop</i>訊息；接收到其他任何訊息，就對下一個程序送同樣的訊息。
+</pre>
+<p>如果传送任何其他讯息，就会让所有的程序不断对下一个程序传递讯息。而以下是测试传送<i>stop</i>讯息的执行结果。</p>
+<pre>
+&gt; [<b>P</b>|_] = <b>example:ring_proc</b>([func,func,func]).
+[&lt;0.233.0&gt;,&lt;0.234.0&gt;,&lt;0.232.0&gt;]
+&gt; <b>P ! stop.</b>
+Stop process &lt;0.233.0&gt;
+stop
+Stop process &lt;0.234.0&gt;
+&gt; Stop process &lt;0.232.0&gt;
+&gt;
+</pre>
+<h3><span class="editsection">[<a href="/w/index.php?title=Erlang&amp;action=edit&amp;section=11" title="编辑段落“容错处理”">编辑</a>]</span> <span class="mw-headline" id=".E5.AE.B9.E9.8C.AF.E8.99.95.E7.90.86">容错处理</span></h3>
+<p>Erlang容错处理机制，由二个步骤实现：一是将二个程序连接起来，二者之间存在一道通讯管道，可提供错误讯息的传递 ── 在此使用<b>link</b>/<b>1</b>函数；二是将程序回报错误的机制打开 ── 在此使用<b>process_flag</b>/<b>2</b>函数。</p>
+<ul>
+<li>使用link(<i>Pid</i>)让程序连接到另一个程序。</li>
+</ul>
+<pre>
+-<b>module</b>(example).
+-<b>compile</b>(export_all).
+hello() -&gt;
+    <i>Pid</i> = spawn(?MODULE, world, []),
+    link(<i>Pid</i>),
+    ... .
+
+執行時，以 Pid = <b>spawn</b>(<i>example</i>, <i>hello</i>, []) 啟動程序，此程序將啟動另一個程序，並且與它連接。
+</pre>
+<dl>
+<dd>但以上程式还不会有错误讯息的传递机制，因为回报错误的开关还没有打开。</dd>
+</dl>
+<ul>
+<li>开启程序回报错误机制。</li>
+</ul>
+<pre>
+以上 hello/0 函數前段使用<b>process_flag</b>/<b>2</b>函數，將<i>trap_exit</i>標籤打開，即可開啟程序回報錯誤機制。
+</pre>
+<pre>
+hello() -&gt;
+    <b>process_flag</b>(<i>trap_exit</i>, <i>true</i>),
+    Pid = spawn(?MODULE, world, []),
+    link(Pid),
+    ... .
+</pre>
+<p>于是，当程序结束时，会送出{'EXIT', <i>From</i>, <i>Reason</i>}资料。程序正常结束时，<i>Reason</i>为<i>normal</i>。</p>
+<p>另外，<b>spawn</b>函数另外有程序连接版本，<b>spawn_link</b>函数，同时启动并连接到新程序。</p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Erlang&amp;action=edit&amp;section=12" title="编辑段落“分布式程式设计”">编辑</a>]</span> <span class="mw-headline" id=".E5.88.86.E6.95.A3.E5.BC.8F.E7.A8.8B.E5.BC.8F.E8.A8.AD.E8.A8.88">分布式程式设计</span></h2>
+<p>Erlang提供分布式机制，能在另一台电脑启动一些Erlang程序，并由本机电脑对其他电脑的Erlang程序传递讯息。</p>
+<ul>
+<li>当启动Erlang环境时，加上一个网络节点名称，就进入分布式Erlang模式。节点可以使用埠号与其他节点通讯。</li>
+</ul>
+<pre>
+$&gt; <b>erl</b> -name node_1
+</pre>
+<ul>
+<li>在同一个网域中，网络节点名称可以使用短名。</li>
+</ul>
+<pre>
+$&gt; <b>erl</b> -sname node_1
+</pre>
+<p>启动新的网络节点时，Erlang使用<b>epmd</b> (Erlang埠号对应管理系统) 指派埠号，提供节点使用。</p>
+<p>当知道一个网络节点名称时，可以在该节点产生新程序。</p>
+<ul>
+<li>在指定节点<i>RemoteNode</i>启动一个程序，<b>spawn</b>启动参数依序为节点名称、模组名称、函数名称、函数的参数列。</li>
+</ul>
+<pre>
+<i>% create a remote process and call the function web:start_server(Port, MaxConnections)</i>
+<i>% on machine RemoteNode</i>
+RemoteProcess = <b>spawn</b>(<i>RemoteNode</i>, web, start_server, [Port, MaxConnections]),
+
+在遠端節點產生新程序之後，可以使用平行式程式設計的技巧，與遠端程序通訊。
+</pre>
+<p><b>Erlang / 开源电信平台</b>提供的程式库，于分布式程式设计可以使用<i>net_adm</i>、<i>net_kernel</i>、<i>slave</i>、... 等模组，做网络通讯<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[5]</a></sup>。</p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Erlang&amp;action=edit&amp;section=13" title="编辑段落“其他程式设计典范”">编辑</a>]</span> <span class="mw-headline" id=".E5.85.B6.E4.BB.96.E7.A8.8B.E5.BC.8F.E8.A8.AD.E8.A8.88.E5.85.B8.E7.AF.84">其他程式设计典范</span></h2>
+<h3><span class="editsection">[<a href="/w/index.php?title=Erlang&amp;action=edit&amp;section=14" title="编辑段落“惰性求值”">编辑</a>]</span> <span class="mw-headline" id=".E6.83.B0.E6.80.A7.E6.B1.82.E5.80.BC">惰性求值</span></h3>
+<p>Erlang程式员可以使用<a href="/wiki/%E6%83%B0%E6%80%A7%E6%B1%82%E5%80%BC" title="惰性求值">惰性求值</a>。不过，必须使用<a href="/wiki/%CE%9B%E6%BC%94%E7%AE%97" title="Λ演算">λ演算</a>式，才能做到惰性求值。</p>
+<pre>
+以下是惰性求值的一例：假設有個<a href="/wiki/LL%E5%89%96%E6%9E%90%E5%99%A8" title="LL剖析器">剖析器</a>程式如下，由於及早求值特徵，本程式將不會求解。
+expr() -&gt; alt(then(factor(), then(literal($+), factor())),
+              then(factor(), then(literal($-), factor()))).
+factor() -&gt; alt(then(term(), then(literal($*), term())),
+                then(term(), then(literal($/), term()))).
+term() -&gt; alt(number(),
+              xthen(literal($(), thenx(expr(), literal($))))).
+此處使用λ演算式及適當使用函數名稱表示，就能進行求值。示例如下。
+expr() -&gt;
+    fun () -&gt;
+          alt(then(fun factor/0, then(literal($+), fun factor/0)),
+              then(fun factor/0, then(literal($-), fun factor/0)))
+    end.
+factor() -&gt;
+    fun () -&gt;
+            alt(then(fun term/0, then(literal($*), fun term/0)),
+                then(fun term/0, then(literal($/), fun term/0)))
+    end.
+term() -&gt;
+    fun () -&gt;
+          alt(number(),
+              xthen(literal($(), thenx(expr(), literal($)))))
+    end.
+</pre>
+<h2><span class="editsection">[<a href="/w/index.php?title=Erlang&amp;action=edit&amp;section=15" title="编辑段落“应用”">编辑</a>]</span> <span class="mw-headline" id=".E6.87.89.E7.94.A8">应用</span></h2>
+<ul>
+<li><a href="/wiki/Wings_3D" title="Wings 3D">Wings 3D</a>，一个用Erlang编写的<a href="/wiki/%E4%B8%89%E7%B6%AD%E8%A8%88%E7%AE%97%E6%A9%9F%E5%9C%96%E5%BD%A2%E8%BB%9F%E4%BB%B6" title="三维计算机图形软件" class="mw-redirect">三维计算机图形软件</a>。</li>
+<li><a href="http://yaws.hyber.org/" class="external text" rel="nofollow">YAWS</a>，以Erlang编写的高效HTTP服务器。</li>
+<li><a href="http://discoproject.org/" class="external text" rel="nofollow">DISCO</a>，以Erlang编写的<a href="/wiki/MapReduce" title="MapReduce">MapReduce</a>架构系统。</li>
+<li><a href="http://couchdb.apache.org/" class="external text" rel="nofollow">Apache CouchDB</a>，以Erlang编写的MapReduce文件式数据库系统。</li>
+<li><a href="http://www.rabbitmq.com/" class="external text" rel="nofollow">RabbitMQ</a>，能搭配Erlang运作的讯息伫列系统。</li>
+</ul>
+<h2><span class="editsection">[<a href="/w/index.php?title=Erlang&amp;action=edit&amp;section=16" title="编辑段落“参考资料”">编辑</a>]</span> <span class="mw-headline" id=".E5.8F.83.E8.80.83.E8.B3.87.E6.96.99">参考资料</span></h2>
+<ol class="references">
+<li id="cite_note-0"><b><a href="#cite_ref-0">^</a></b> <span class="citation web"><a href="http://www.it.uu.se/research/group/hipe/" class="external text" rel="nofollow">High Performance Erlang</a> <span class="reference-accessdate">[2008-04-13]</span>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=High+Performance+Erlang&amp;rft.atitle=&amp;rft_id=http%3A%2F%2Fwww.it.uu.se%2Fresearch%2Fgroup%2Fhipe%2F&amp;rfr_id=info:sid/zh.wikipedia.org:Erlang"><span style="display: none;">&#160;</span></span></li>
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="citation web"><a href="http://www.codersatwork.com/" class="external text" rel="nofollow">Coders At Work</a>. Book introduction <span class="reference-accessdate">[2010-08-30]</span>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Coders+At+Work&amp;rft.atitle=Book+introduction&amp;rft_id=http%3A%2F%2Fwww.codersatwork.com%2F&amp;rfr_id=info:sid/zh.wikipedia.org:Erlang"><span style="display: none;">&#160;</span></span>见<i>Coders At Work</i>一书对Joe Armstrong的口述记录。</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="citation web"><a href="http://www.erlang.org/faq/faq.html#AEN50" class="external text" rel="nofollow">Who uses Erlang for product development?</a>. Frequently asked questions about Erlang <span class="reference-accessdate">[2008-04-13]</span>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Who+uses+Erlang+for+product+development%3F&amp;rft.atitle=Frequently+asked+questions+about+Erlang&amp;rft_id=http%3A%2F%2Fwww.erlang.org%2Ffaq%2Ffaq.html%23AEN50&amp;rfr_id=info:sid/zh.wikipedia.org:Erlang"><span style="display: none;">&#160;</span></span> “<i>The largest user of Erlang is Ericsson. Ericsson use it to write software used in telecommunications systems. Many (dozens) projects have used it, a particularly large one is the extremely scalable AXD301 ATM switch.</i>” FAQ中列出的其他用户包括: Nortel、Deutsche Flugsicherung、T-Mobile等</li>
+<li id="cite_note-OTP-3"><b><a href="#cite_ref-OTP_3-0">^</a></b> <a href="http://en.wikipedia.org/wiki/Open_Telecom_Platform" class="external free" rel="nofollow">http://en.wikipedia.org/wiki/Open_Telecom_Platform</a></li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> 参考<a href="http://www.erlang.org/doc/reference_manual/distributed.html" class="external text" rel="nofollow">分布式Erlang</a>， <a href="http://www.erlang.org/doc/reference_manual/distributed.html" class="external free" rel="nofollow">http://www.erlang.org/doc/reference_manual/distributed.html</a></li>
+</ol>
+<h2><span class="editsection">[<a href="/w/index.php?title=Erlang&amp;action=edit&amp;section=17" title="编辑段落“外部链接”">编辑</a>]</span> <span class="mw-headline" id=".E5.A4.96.E9.83.A8.E9.8F.88.E6.8E.A5">外部链接</span></h2>
+<ul>
+<li><a href="http://www.erlang.org/" class="external text" rel="nofollow">Erlang开放源码版本</a><span style="font-family: sans-serif; cursor: default; color:#555; font-size: 0.8em; bottom: 0.1em; font-weight: bold;" title="连接到英文网页">（英文）</span></li>
+<li><a href="http://www.erlang.se/" class="external text" rel="nofollow">Erlang爱立信授权版本</a><span style="font-family: sans-serif; cursor: default; color:#555; font-size: 0.8em; bottom: 0.1em; font-weight: bold;" title="连接到英文网页">（英文）</span></li>
+<li><a href="http://www.erlang.org/download/armstrong_thesis_2003.pdf" class="external text" rel="nofollow">因应软件错误建构可靠的分布式系统</a><span style="font-family: sans-serif; cursor: default; color:#555; font-size: 0.8em; bottom: 0.1em; font-weight: bold;" title="连接到英文网页">（英文）</span></li>
+<li><a href="http://erlang-china.org/" class="external text" rel="nofollow">Erlang中文社区</a><span style="font-family: sans-serif; cursor: default; color:#555; font-size: 0.8em; bottom: 0.1em; font-weight: bold;" title="连接到简体中文网页">（简体中文）</span></li>
+<li>在<a href="/wiki/%E5%BC%80%E6%94%BE%E5%BC%8F%E7%9B%AE%E5%BD%95" title="开放式目录">开放式目录计划</a>中查阅<a href="http://dmoz.org/Computers/Programming/Languages/Erlang" class="external text" rel="nofollow">Erlang</a>的相关内容</li>
+</ul>
+<table class="navbox" cellspacing="0" style=";">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse" style="width:100%;background:transparent;color:inherit;;">
+<tr>
+<th style=";" colspan="2" class="navbox-title">
+<div style="float:left; width:6em;text-align:left;">
+<div class="noprint plainlinksneverexpand" style="background-color:transparent; padding:0; font-weight:normal; font-size:80%; color:#000000; white-space:nowrap;"><a href="/wiki/Template:%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80" title="Template:程序设计语言"><span style=";;border:none;" title="查看这个模板">查</span></a>&#160;<span style="white-space:nowrap; font-weight:bold;">&#160;·</span> &#160;<a href="/wiki/Template_talk:%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80" title="Template talk:程序设计语言"><span style=";;border:none;" title="关于这个模板的讨论页面">论</span></a>&#160;<span style="white-space:nowrap; font-weight:bold;">&#160;·</span> &#160;<a href="http://zh.wikipedia.org/w/index.php?title=Template:%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80&amp;action=edit" class="external text" rel="nofollow"><span style=";;border:none;" title="您可以编辑这个模板。请在储存变更之前先预览">编</span></a></div>
+</div>
+<span style="font-size:110%;"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80" title="程序设计语言" class="mw-redirect">程序设计语言</a></span></th>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-group" style=";;"><a href="/wiki/.NET_Framework" title=".NET Framework" class="mw-redirect">.NET Framework</a>语言</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-odd">
+<div style="padding:0em 0.25em"><a href="/wiki/C%2B%2B/CLI" title="C++/CLI">C++/CLI</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/C_Sharp" title="C Sharp" class="mw-redirect">C#</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/F_Sharp" title="F Sharp" class="mw-redirect">F#</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/IronPython" title="IronPython">IronPython</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/%EF%BC%AA%EF%BC%83" title="Ｊ＃" class="mw-redirect">J#</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Microsoft_Visual_C%E2%99%AF" title="Microsoft Visual C♯">Visual C#</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Visual_Basic_.NET" title="Visual Basic .NET">Visual Basic .NET</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Microsoft_Small_Basic" title="Microsoft Small Basic">Small Basic</a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-group" style=";;"><a href="/wiki/C%E8%AF%AD%E8%A8%80" title="C语言">C</a>/<a href="/wiki/C%2B%2B" title="C++">C++</a>语言</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-even">
+<div style="padding:0em 0.25em"><a href="/wiki/C%E8%AF%AD%E8%A8%80" title="C语言">C</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/C%2B%2B" title="C++">C++</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Turbo_C%2B%2B" title="Turbo C++">Turbo C++</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Borland_C%2B%2B" title="Borland C++">Borland C++</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/C%2B%2B_Builder" title="C++ Builder" class="mw-redirect">C++ Builder</a>- <a href="/wiki/C%2B%2B/CLI" title="C++/CLI">C++/CLI</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Objective-C" title="Objective-C">Objective-C</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Visual_C%2B%2B" title="Visual C++" class="mw-redirect">Visual C++</a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-group" style=";;">BASIC语言</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-odd">
+<div style="padding:0em 0.25em"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="width:100%;;;;">
+<tr>
+<td class="navbox-group" style=";;">有行号</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-odd">
+<div style="padding:0em 0.25em"><a href="/wiki/BASIC" title="BASIC">BASIC</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/BASICA" title="BASICA">BASICA</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/GW-BASIC" title="GW-BASIC">GW-BASIC</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/ETBASIC" title="ETBASIC">ETBASIC</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/GVBASIC" title="GVBASIC">GVBASIC</a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-group" style=";;">无行号</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-even">
+<div style="padding:0em 0.25em"><a href="/wiki/QBASIC" title="QBASIC">QBASIC</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/QuickBASIC" title="QuickBASIC">QuickBASIC</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/True_BASIC" title="True BASIC">True BASIC</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Turbo_BASIC" title="Turbo BASIC">Turbo BASIC</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/PowerBASIC" title="PowerBASIC">PowerBASIC</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/DarkBASIC" title="DarkBASIC">DarkBASIC</a><br />
+<a href="/wiki/Visual_Basic" title="Visual Basic">Visual Basic</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Visual_Basic_.NET" title="Visual Basic .NET">Visual Basic .NET</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/VBScript" title="VBScript">VBScript</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Visual_Basic_for_Applications" title="Visual Basic for Applications">Visual Basic for Applications</a>（<a href="/wiki/VBA" title="VBA">VBA</a>）<span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/REALbasic" title="REALbasic">REALbasic</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Microsoft_Small_Basic" title="Microsoft Small Basic">Small Basic</a></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-group" style=";;">Pascal/Delphi语言</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-even">
+<div style="padding:0em 0.25em"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="width:100%;;;;">
+<tr>
+<td class="navbox-group" style=";;">Pascal语法</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-odd">
+<div style="padding:0em 0.25em"><a href="/wiki/Pascal_(%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80)" title="Pascal (编程语言)">Pascal</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Turbo_Pascal" title="Turbo Pascal">Turbo Pascal</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Object_Pascal" title="Object Pascal">Object Pascal</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Free_Pascal" title="Free Pascal">Free Pascal</a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-group" style=";;">Pascal+Delphi语法</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-even">
+<div style="padding:0em 0.25em"><a href="/wiki/Delphi" title="Delphi">Delphi</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Lazarus" title="Lazarus">Lazarus</a></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-group" style=";;"><a href="/wiki/ECMAScript" title="ECMAScript">ECMAScript</a>语言</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-odd">
+<div style="padding:0em 0.25em"><a href="/wiki/ActionScript" title="ActionScript">ActionScript</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/DMDScript" title="DMDScript">DMDScript</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/JavaScript" title="JavaScript">JavaScript</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/JScript" title="JScript">JScript</a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-group" style=";;">Python语言</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-even">
+<div style="padding:0em 0.25em"><a href="/wiki/Python" title="Python">Python</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/IronPython" title="IronPython">IronPython</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Jython" title="Jython">Jython</a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-group" style=";;"><a href="/wiki/%E8%B3%87%E6%96%99%E5%BA%AB" title="数据库" class="mw-redirect">数据库</a>相关编程语言</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-odd">
+<div style="padding:0em 0.25em"><a href="/wiki/Clipper" title="Clipper">Clipper</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Visual_FoxPro" title="Visual FoxPro">Visual FoxPro</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/SQL" title="SQL">SQL</a>（<a href="/wiki/PL-SQL" title="PL-SQL">PL/SQL</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Transact-SQL" title="Transact-SQL">T-SQL</a>）<span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/%E5%AD%98%E5%82%A8%E7%A8%8B%E5%BA%8F" title="存储程序">SQL预存程序</a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-group" style=";;"><a href="/wiki/GPU" title="GPU" class="mw-redirect">GPU</a>用着色器语言</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-even">
+<div style="padding:0em 0.25em"><a href="/wiki/Cg%E8%AA%9E%E8%A8%80" title="Cg语言">Cg</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/GLSL" title="GLSL">GLSL</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/HLSL" title="HLSL" class="mw-redirect">HLSL</a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-group" style=";;"><a href="/wiki/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80" title="函数式编程语言" class="mw-redirect">函数式编程语言</a></td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-odd">
+<div style="padding:0em 0.25em"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="width:100%;;;;">
+<tr>
+<td class="navbox-group" style=";;">Lisp家族</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-odd">
+<div style="padding:0em 0.25em"><a href="/wiki/LISP" title="LISP">LISP</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Scheme" title="Scheme">Scheme</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a></div>
+</td>
+</tr>
+</table>
+<div><a href="/wiki/Haskell" title="Haskell">Haskell</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/OCaml" title="OCaml">OCaml</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/F%EF%BC%83" title="F＃" class="mw-redirect">F#</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Scala" title="Scala">Scala</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <strong class="selflink">Erlang</strong><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Concurrent_Clean" title="Concurrent Clean">Clean</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/w/index.php?title=Miranda&amp;action=edit&amp;redlink=1" class="new" title="Miranda">Miranda</a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-group" style=";;">各种Shell语言</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-even">
+<div style="padding:0em 0.25em"><a href="/wiki/Bash" title="Bash">bash</a>, <a href="/wiki/Sed" title="Sed">sed</a>, <a href="/wiki/Awk" title="Awk" class="mw-redirect">awk</a>, <a href="/wiki/PowerShell" title="PowerShell" class="mw-redirect">PowerShell</a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-group" style=";;">专业工具语言</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-odd">
+<div style="padding:0em 0.25em"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="width:100%;;;;">
+<tr>
+<td class="navbox-group" style=";;">科学与统计计算</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-odd">
+<div style="padding:0em 0.25em"><a href="/wiki/FORTRAN" title="FORTRAN" class="mw-redirect">FORTRAN</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/MATLAB" title="MATLAB">MATLAB</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/SCILAB" title="SCILAB" class="mw-redirect">SCILAB</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/R%E8%AF%AD%E8%A8%80" title="R语言">R</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/w/index.php?title=S-Plus&amp;action=edit&amp;redlink=1" class="new" title="S-Plus">S-Plus</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/MATHEMATICA" title="MATHEMATICA" class="mw-redirect">MATHEMATICA</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-group" style=";;">工业与辅助设计</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-even">
+<div style="padding:0em 0.25em"><a href="/w/index.php?title=AutoCAD_Lisp&amp;action=edit&amp;redlink=1" class="new" title="AutoCAD Lisp">AutoCAD Lisp</a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-group" style=";;">计算机软件</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-odd">
+<div style="padding:0em 0.25em"><a href="/wiki/Powerbuilder" title="Powerbuilder">Powerbuilder</a></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-group" style=";;"><a href="/wiki/%E7%BD%AE%E6%A0%87%E8%AF%AD%E8%A8%80" title="置标语言">置标语言</a></td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-even">
+<div style="padding:0em 0.25em"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="width:100%;;;;">
+<tr>
+<td class="navbox-group" style=";;"><a href="/wiki/SGML" title="SGML">SGML</a>家族</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-odd">
+<div style="padding:0em 0.25em"><a href="/wiki/SGML" title="SGML">SGML</a></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="width:100%;;;;">
+<tr>
+<td class="navbox-group" style=";;"><a href="/wiki/XML" title="XML">XML</a>家族</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-odd">
+<div style="padding:0em 0.25em"><a href="/wiki/XML" title="XML">XML</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/HTML" title="HTML">HTML</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/SVG" title="SVG">SVG</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/w/index.php?title=XML-Schema&amp;action=edit&amp;redlink=1" class="new" title="XML-Schema">XML-Schema</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/w/index.php?title=XSTL&amp;action=edit&amp;redlink=1" class="new" title="XSTL">XSTL</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/XHTML" title="XHTML">XHTML</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/MathML" title="MathML" class="mw-redirect">MathML</a></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-group" style=";;"><a href="/wiki/Java%E8%99%9A%E6%8B%9F%E6%9C%BA" title="Java虚拟机">Java虚拟机</a>上的语言</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-odd">
+<div style="padding:0em 0.25em"><a href="/wiki/Java" title="Java">Java</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Jython" title="Jython">Jython</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/JRuby" title="JRuby">JRuby</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/w/index.php?title=JSheme&amp;action=edit&amp;redlink=1" class="new" title="JSheme">JSheme</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Groovy" title="Groovy">Groovy</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/w/index.php?title=Kawa&amp;action=edit&amp;redlink=1" class="new" title="Kawa">Kawa</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Scala" title="Scala">Scala</a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-group" style=";;"><a href="/wiki/%E8%A6%96%E8%A6%BA%E5%8C%96%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88%E8%AA%9E%E8%A8%80" title="视觉化程式设计语言">视觉化程式设计语言</a></td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-even">
+<div style="padding:0em 0.25em"><a href="/wiki/LabVIEW" title="LabVIEW">LabVIEW</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Quartz_Composer" title="Quartz Composer" class="mw-redirect">Quartz Composer</a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-group" style=";;">其他编程语言</td>
+<td style="text-align:left;border-left:2px solid #fdfdfd;width:100%;padding:0px;;;" class="navbox-list navbox-even">
+<div style="padding:0em 0.25em"><a href="/wiki/%E7%B5%84%E5%90%88%E8%AA%9E%E8%A8%80" title="组合语言" class="mw-redirect">汇编语言</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/A%2B" title="A+">A+</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/ALGOL" title="ALGOL">ALGOL</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/APL%E8%AA%9E%E8%A8%80" title="APL语言">APL</a>/<a href="/wiki/J%E8%AF%AD%E8%A8%80" title="J语言">J</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Ada" title="Ada">Ada</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/B%E8%AF%AD%E8%A8%80" title="B语言" class="mw-redirect">B</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Brainfuck" title="Brainfuck">Brainfuck</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/COBOL" title="COBOL">COBOL</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Curl%E8%AA%9E%E8%A8%80" title="Curl语言" class="mw-redirect">Curl</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/D%E8%AA%9E%E8%A8%80" title="D语言">D</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Eiffel" title="Eiffel">Eiffel</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Forth" title="Forth">Forth</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Jess" title="Jess" class="mw-redirect">Jess</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Logo%E8%AF%AD%E8%A8%80" title="Logo语言">Logo</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Lua" title="Lua">Lua</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/ML%E8%AF%AD%E8%A8%80" title="ML语言">ML</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/MUMPS" title="MUMPS">MUMPS</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Nuva%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80" title="Nuva编程语言" class="mw-redirect">Nuva</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/PHP" title="PHP">PHP</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/PL/I" title="PL/I">PL/I</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Perl" title="Perl">Perl</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/PostScript" title="PostScript">PostScript</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/REXX" title="REXX">REXX</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Ruby" title="Ruby">Ruby</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/SAC%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80" title="SAC编程语言">SAC</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Self" title="Self">Self</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Smalltalk" title="Smalltalk">Smalltalk</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Go" title="Go">Go</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Prolog" title="Prolog">Prolog</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/%E6%98%93%E8%AF%AD%E8%A8%80" title="易语言">易语言</a><span style="white-space:nowrap; font-weight:bold;">&#160;·</span> <a href="/wiki/Tcl" title="Tcl">Tcl/Tk</a></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 3508/1000000
+Post-expand include size: 87649/2048000 bytes
+Template argument size: 38219/2048000 bytes
+Expensive parser function count: 1/500
+-->
+
+<!-- Saved in parser cache with key zhwiki:pcache:idhash:721006-0!*!0!!zh!*!zh-cn and timestamp 20110923002649 -->
+<div class="printfooter">
+来自“<a href="http://zh.wikipedia.org/wiki/Erlang">http://zh.wikipedia.org/wiki/Erlang</a>”</div>
+				<!-- /bodytext -->
+								<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/wiki/Special:%E9%A1%B5%E9%9D%A2%E5%88%86%E7%B1%BB" title="Special:页面分类">2个分类</a>: <span dir='ltr'><a href="/wiki/Category:%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80" title="Category:程式語言">编程语言</a></span> | <span dir='ltr'><a href="/wiki/Category:%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80" title="Category:函数式编程语言">函数式编程语言</a></span></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>个人工具</h5>
+	<ul>
+					<li  id="pt-login"><a href="/w/index.php?title=Special:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;returnto=Erlang" title="建议你登录，尽管并非必须。 [o]" accesskey="o">登录/创建账户</a></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>名字空间</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Erlang"  title="查看页面内容 [c]" accesskey="c">条目</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Talk:Erlang"  title="关于此页面的讨论 [t]" accesskey="t">讨论</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu">
+			<h4>
+																								大陆简体																						</h4>
+		<h5><span>变换</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+							<li id="ca-0"><a href="/zh/Erlang" >不转换</a></li>
+							<li id="ca-1"><a href="/zh-hans/Erlang" >简体</a></li>
+							<li id="ca-2"><a href="/zh-hant/Erlang" >繁體</a></li>
+							<li id="ca-3" class="selected"><a href="/zh-cn/Erlang" >大陆简体</a></li>
+							<li id="ca-4"><a href="/zh-hk/Erlang" >港澳繁體</a></li>
+							<li id="ca-5"><a href="/zh-sg/Erlang" >马新简体</a></li>
+							<li id="ca-6"><a href="/zh-tw/Erlang" >台灣正體</a></li>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>查看</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Erlang" >阅读</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Erlang&amp;action=edit"  title="你可以编辑本页。请在保存前预览一下。 [e]" accesskey="e">编辑</a></span></li>
+					<li id="ca-history" class="collapsible "><span><a href="/w/index.php?title=Erlang&amp;action=history"  title="本页面的早前版本。 [h]" accesskey="h">查看历史</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>操作</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">搜索</label></h5>
+	<form action="/w/index.php" id="searchform">
+		<input type='hidden' name="title" value="Special:搜索"/>
+				<div id="simpleSearch">
+						<input id="searchInput" name="search" type="text"  title="搜索维基百科 [f]" accesskey="f"  value="" />
+						<button id="searchButton" type='submit' name='button'  title="搜索含这些文字的页面"><img src="http://bits.wikimedia.org/skins-1.17/vector/images/search-ltr.png?301-3" alt="搜索" /></button>
+					</div>
+			</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/commons/0/0a/Wikipedia-logo-v2-zh.png);" href="/wiki/Wikipedia:%E9%A6%96%E9%A1%B5"  title="首页"></a></div>
+				<!-- /logo -->
+				
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- navigation -->
+<div class="portal" id='p-navigation'>
+	<h5>导航</h5>
+	<div class="body">
+				<ul>
+					<li id="n-mainpage-description"><a href="/wiki/Wikipedia:%E9%A6%96%E9%A1%B5" title="访问首页 [z]" accesskey="z">首页</a></li>
+					<li id="n-indexpage"><a href="/wiki/Wikipedia:%E5%88%86%E9%A1%9E%E7%B4%A2%E5%BC%95">分類索引</a></li>
+					<li id="n-Featured_content"><a href="/wiki/Portal:%E7%89%B9%E8%89%B2%E5%85%A7%E5%AE%B9">特色内容</a></li>
+					<li id="n-currentevents"><a href="/wiki/Portal:%E6%96%B0%E8%81%9E%E5%8B%95%E6%85%8B" title="提供当前新闻事件的背景资料">新闻动态</a></li>
+					<li id="n-recentchanges"><a href="/wiki/Special:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" title="列出维基百科中的最近修改 [r]" accesskey="r">最近更改</a></li>
+					<li id="n-randompage"><a href="/wiki/Special:%E9%9A%8F%E6%9C%BA%E9%A1%B5%E9%9D%A2" title="随机载入一个页面 [x]" accesskey="x">随机条目</a></li>
+				</ul>
+			</div>
+</div>
+
+<!-- /navigation -->
+
+<!-- help -->
+<div class="portal" id='p-help'>
+	<h5>帮助</h5>
+	<div class="body">
+				<ul>
+					<li id="n-help"><a href="/wiki/Help:%E7%9B%AE%E5%BD%95" title="寻求帮助">帮助</a></li>
+					<li id="n-portal"><a href="/wiki/Wikipedia:%E7%A4%BE%E5%8C%BA%E4%B8%BB%E9%A1%B5" title="关于本计划、你可以做什么、应该如何做">社区专页</a></li>
+					<li id="n-policy"><a href="/wiki/Wikipedia:%E6%96%B9%E9%87%9D%E8%88%87%E6%8C%87%E5%BC%95">方针与指引</a></li>
+					<li id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%92%E5%8A%A9%E5%AE%A2%E6%A0%88">互助客栈</a></li>
+					<li id="n-Information_desk"><a href="/wiki/Wikipedia:%E8%A9%A2%E5%95%8F%E8%99%95">询问处</a></li>
+					<li id="n-conversion"><a href="/wiki/Wikipedia:%E5%AD%97%E8%AF%8D%E8%BD%AC%E6%8D%A2%E8%AF%B7%E6%B1%82%E6%88%96%E5%80%99%E9%80%89">字词转换</a></li>
+					<li id="n-IRC"><a href="/wiki/Wikipedia:IRC%E8%81%8A%E5%A4%A9%E9%A2%91%E9%81%93">IRC即时聊天</a></li>
+					<li id="n-contact"><a href="/wiki/Wikipedia:%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC">联系我们</a></li>
+					<li id="n-about"><a href="/wiki/Wikipedia:%E5%85%B3%E4%BA%8E">关于维基百科</a></li>
+					<li id="n-sitesupport"><a href="http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&amp;language=zh&amp;utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=20101204SB002" title="如果您在維基百科受益良多，您可以考慮資助我們">资助维基百科</a></li>
+				</ul>
+			</div>
+</div>
+
+<!-- /help -->
+
+<!-- TOOLBOX -->
+<div class="portal" id="p-tb">
+	<h5>工具</h5>
+	<div class="body">
+		<ul>
+					<li id="t-whatlinkshere"><a href="/wiki/Special:%E9%93%BE%E5%85%A5%E9%A1%B5%E9%9D%A2/Erlang" title="列出所有与本页相链的页面 [j]" accesskey="j">链入页面</a></li>
+						<li id="t-recentchangeslinked"><a href="/wiki/Special:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9/Erlang" title="页面链出所有页面的更改 [k]" accesskey="k">链出更改</a></li>
+																																					<li id="t-upload"><a href="/wiki/Project:%E4%B8%8A%E4%BC%A0" title="上传图像或多媒体文件 [u]" accesskey="u">上传文件</a></li>
+											<li id="t-specialpages"><a href="/wiki/Special:%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2" title="全部特殊页面的列表 [q]" accesskey="q">特殊页面</a></li>
+									<li id="t-print"><a href="/w/index.php?title=Erlang&amp;printable=yes" rel="alternate" title="本页面的可打印版本 [p]" accesskey="p">打印页面</a></li>
+						<li id="t-permalink"><a href="/w/index.php?title=Erlang&amp;oldid=17025976" title="本页面该修订版本的永久链接">永久链接</a></li>
+				<li id="t-cite"><a href="/w/index.php?title=Special:%E5%BC%95%E7%94%A8&amp;page=Erlang&amp;id=17025976" title="关于如何引用此页的资讯">引用此文</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- LANGUAGES -->
+<div class="portal" id="p-lang">
+	<h5>其他语言</h5>
+	<div class="body">
+		<ul>
+					<li class="interwiki-ar"><a href="http://ar.wikipedia.org/wiki/%D8%A5%D8%B1%D9%84%D8%A7%D9%86%D8%AC" title="إرلانج">العربية</a></li>
+					<li class="interwiki-bg"><a href="http://bg.wikipedia.org/wiki/Erlang" title="Erlang">Български</a></li>
+					<li class="interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Erlang" title="Erlang">Català</a></li>
+					<li class="interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Erlang_(programovac%C3%AD_jazyk)" title="Erlang (programovací jazyk)">Česky</a></li>
+					<li class="interwiki-da"><a href="http://da.wikipedia.org/wiki/Erlang_(programmeringssprog)" title="Erlang (programmeringssprog)">Dansk</a></li>
+					<li class="interwiki-de"><a href="http://de.wikipedia.org/wiki/Erlang_(Programmiersprache)" title="Erlang (Programmiersprache)">Deutsch</a></li>
+					<li class="interwiki-el"><a href="http://el.wikipedia.org/wiki/Erlang" title="Erlang">Ελληνικά</a></li>
+					<li class="interwiki-en"><a href="http://en.wikipedia.org/wiki/Erlang_(programming_language)" title="Erlang (programming language)">English</a></li>
+					<li class="interwiki-es"><a href="http://es.wikipedia.org/wiki/Erlang" title="Erlang">Español</a></li>
+					<li class="interwiki-et"><a href="http://et.wikipedia.org/wiki/Erlang" title="Erlang">Eesti</a></li>
+					<li class="interwiki-fa"><a href="http://fa.wikipedia.org/wiki/%D8%A7%D8%B1%D9%84%D9%86%DA%AF" title="ارلنگ">فارسی</a></li>
+					<li class="interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Erlang_(langage)" title="Erlang (langage)">Français</a></li>
+					<li class="interwiki-gl"><a href="http://gl.wikipedia.org/wiki/Erlang" title="Erlang">Galego</a></li>
+					<li class="interwiki-it"><a href="http://it.wikipedia.org/wiki/Erlang_(linguaggio)" title="Erlang (linguaggio)">Italiano</a></li>
+					<li class="interwiki-ja"><a href="http://ja.wikipedia.org/wiki/Erlang" title="Erlang">日本語</a></li>
+					<li class="interwiki-ka"><a href="http://ka.wikipedia.org/wiki/%E1%83%94%E1%83%A0%E1%83%9A%E1%83%90%E1%83%9C%E1%83%92%E1%83%98_(%E1%83%9E%E1%83%A0%E1%83%9D%E1%83%92%E1%83%A0%E1%83%90%E1%83%9B%E1%83%98%E1%83%A0%E1%83%94%E1%83%91%E1%83%98%E1%83%A1_%E1%83%94%E1%83%9C%E1%83%90)" title="ერლანგი (პროგრამირების ენა)">ქართული</a></li>
+					<li class="interwiki-ko"><a href="http://ko.wikipedia.org/wiki/%EC%96%BC%EB%9E%91_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4)" title="얼랑 (프로그래밍 언어)">한국어</a></li>
+					<li class="interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Erlang_(programmeertaal)" title="Erlang (programmeertaal)">Nederlands</a></li>
+					<li class="interwiki-no"><a href="http://no.wikipedia.org/wiki/Erlang_(programmeringsspr%C3%A5k)" title="Erlang (programmeringsspråk)">‪Norsk (bokmål)‬</a></li>
+					<li class="interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Erlang_(j%C4%99zyk_programowania)" title="Erlang (język programowania)">Polski</a></li>
+					<li class="interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Erlang_(linguagem_de_programa%C3%A7%C3%A3o)" title="Erlang (linguagem de programação)">Português</a></li>
+					<li class="interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Erlang" title="Erlang">Русский</a></li>
+					<li class="interwiki-sl"><a href="http://sl.wikipedia.org/wiki/Erlang" title="Erlang">Slovenščina</a></li>
+					<li class="interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Erlang_(programspr%C3%A5k)" title="Erlang (programspråk)">Svenska</a></li>
+					<li class="interwiki-tg"><a href="http://tg.wikipedia.org/wiki/Erlang" title="Erlang">Тоҷикӣ</a></li>
+					<li class="interwiki-th"><a href="http://th.wikipedia.org/wiki/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%AD%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%81%E0%B8%A5%E0%B8%87" title="ภาษาเออร์แลง">ไทย</a></li>
+					<li class="interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Erlang" title="Erlang">Українська</a></li>
+				</ul>
+	</div>
+</div>
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+											<ul id="footer-info">
+																	<li id="footer-info-lastmod"> 本页面最后修订于2011年7月8日 (星期五) 03:09。</li>
+																							<li id="footer-info-copyright">本站的全部文字在<a href="/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" title="Wikipedia:CC-by-sa-3.0协议文本">知识共享 署名-相同方式共享 3.0协议</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.zh" style="display:none;"></a>之条款下提供，附加条款亦可能应用。（请参阅<a href="http://wikimediafoundation.org/wiki/Terms_of_Use">使用条款</a>）<br />
+Wikipedia&reg;和维基百科标志是<a href="http://wikimediafoundation.org">维基媒体基金会</a>的注册商标；维基&trade;是维基媒体基金会的商标。<br />维基媒体基金会是在美国佛罗里达州登记的501(c)(3)<a href="http://wikimediafoundation.org/wiki/%E8%B5%84%E5%8A%A9%E7%9A%84%E5%85%8D%E7%A8%8E%E6%94%BF%E7%AD%96">免税</a>、非营利、慈善机构。<br /></li>
+															</ul>
+															<ul id="footer-places">
+																	<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/%E9%9A%90%E7%A7%81%E6%94%BF%E7%AD%96" title="wikimedia:隐私政策">隐私政策</a></li>
+																							<li id="footer-places-about"><a href="/wiki/Wikipedia:%E5%85%B3%E4%BA%8E" title="Wikipedia:关于">关于维基百科</a></li>
+																							<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E" title="Wikipedia:免责声明">免责声明</a></li>
+																							<li id="footer-places-mobileview"><a href='/w/index.php?title=Erlang&amp;useformat=mobile'>移动浏览</a></li>
+															</ul>
+											<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/skins-1.17/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script type="text/javascript">if ( window.mediaWiki ) {
+	mediaWiki.loader.load(["mediawiki.legacy.wikibits", "mediawiki.util", "mediawiki.legacy.ajax", "mediawiki.legacy.mwsuggest", "ext.vector.collapsibleNav", "ext.vector.collapsibleTabs", "ext.vector.editWarning", "ext.vector.simpleSearch"]);
+	mediaWiki.loader.go();
+}
+</script>
+
+<script src="/w/index.php?title=Special:%E6%A8%AA%E5%B9%85%E6%8E%A7%E5%88%B6%E5%99%A8&amp;cache=/cn.js&amp;301-3" type="text/javascript"></script>
+<script src="http://bits.wikimedia.org/zh.wikipedia.org/load.php?debug=false&amp;lang=zh&amp;modules=site&amp;only=scripts&amp;skin=vector" type="text/javascript"></script>
+<script type="text/javascript">if ( window.mediaWiki ) {
+	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,
+	"watchlistdays":"3","watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"useeditwarning":1,"vector-collapsiblenav":1,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"wikilove-enabled":1,"variant":"zh","language":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false});;mediaWiki.loader.state({"user.options":"ready"});
+	
+	/* cache key: zhwiki:resourceloader:filter:minify-js:5:42e56d3219c0a39727f9357ce86eb5c3 */
+}
+</script><script type="text/javascript" src="//geoiplookup.wikimedia.org/"></script>		<!-- fixalpha -->
+		<script type="text/javascript"> if ( window.isMSIE55 ) fixalpha(); </script>
+		<!-- /fixalpha -->
+		<!-- Served by srv228 in 0.118 secs. -->			</body>
+</html>
