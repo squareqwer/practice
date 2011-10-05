@@ -4,7 +4,7 @@
 -compile(export_all).
 
 
-strart() ->
+st2art() ->
     spawn(fun loop/0).
 
 area(Pid,What) ->
