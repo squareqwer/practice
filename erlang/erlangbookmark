@@ -215,5 +215,94 @@ file:read_file()
 用~有可能找不到路径
 
 
+apply
+BIF apply (Mod,func, Arg1,Arg2,..,ArgN).
 
 
+
+循环匹配取值
+L = [{Key1,Val1},{Key2,Val2},...{KeyN,ValN}]
+
+查找Key4,的Val4 
+Val = lookup(Key4,L).
+
+lookup(Key,[Key,Val|_] ) -> {ok, Val};
+lookup(Key,[_|T])->lookup(Key,T);
+lookup(_,[])->error.                       
+
+
+
+块表达式
+
+begin
+ Expr1,
+ ...
+ ExprN
+end
+
+可以使用块表达式把一串表达式组织成一个类似子句的实体。begin ... end块的值就是块表达式中最后一个表达式的值
+
+
+布尔表达式
+
+not B1;
+B1 and B2
+B1 or B2
+B1 xor B2
+
+
+包含文件
+
+-include(FileName).
+-include_lib(FileName). %%引入库中的包含文件
+可以包含扩展名为.hrl的包含文件
+ 
+
+宏
+-define(Constant, Replacement).
+-define(Func(Var1,Var2,..,Var), Replacement).
+
+example:
+-define(macro1(X,Y), {a,X,Y}).
+foo(A)-> ?mcro1(A+10,b).
+
+?FILE 当前文件名
+?MODULE 当前模块
+?LINE 当前行
+
+-undef(Macro).
+-ifdef(Macro).
+-ifndef(Macro).
+-else
+-endif
+
+example:
+
+-ifdef(debug)
+-define(TRACE(X),io:format("TRACE ~p:~p ~p~n",[?Module, ?FILE ,?LINE, X])).
+-else
+-define(TRACE(X),void).
+-endif 
+
+
+在模式中使用匹配操作符
+
+
+数值类型
+1，整型
+（1）传统语法：
+（2）K进制整数： k#Digits  2#10101002, 8#123157123, 16 #ffff 最高到 36进制
+（3）$语法：语法$C表示ASCII字符C 整数值，$a = 97  $\n = 10 $\^c = 3
+2，浮点型
+Erlang可表示的浮点数的范围是-10^323 ~ 10 ^308
+
+
+进程字典
+@spec put(Key, Value)->Value.
+@spec get(Key)->Value.
+@spec get()->[{Key,Value}].
+@spec get_keys(Value)->[Key].
+@spec erase(Key)->Value.
+@spec erase()->[{Key,Value}].
+如字典个存在键Key对应的值，那么返回对应的值，否则返回原子undefine
+如果使用进程字典，代码将不在是没有副作用的
