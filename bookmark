@@ -77,7 +77,7 @@ git clone git://github.com/mochi/mochiweb.git
 http://code.google.com/p/erlbattle/ 
 svn checkout http://erlbattle.googlecode.com/svn/trunk/ erlbattle-read-only
 
-* 
+* NextGen MMO Architecture
 http://next-gen.cc/
 
 * textmate erlang.tmbundle
