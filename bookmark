@@ -77,6 +77,9 @@ git clone git://github.com/mochi/mochiweb.git
 http://code.google.com/p/erlbattle/ 
 svn checkout http://erlbattle.googlecode.com/svn/trunk/ erlbattle-read-only
 
+* 
+http://next-gen.cc/
+
 * textmate erlang.tmbundle
 textmate的erlang 插件
 svn co http://svn.textmate.org/trunk/Bundles/Erlang.tmbundle
