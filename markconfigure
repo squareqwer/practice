@@ -1,0 +1,21 @@
+configure - 配置源代码树
+
+安装目录
+这些选项控制着安装目录的结构。安装目录的结构取决于所选择的布局。方括号"[]"内是默认值。
+
+--prefix=PREFIX
+
+环境变量
+
+可以通过指定某些环境变量来修改configure脚本的默认选择，或者帮助configure脚本找到名字和/或位置不标准的库和程序。
+
+CC
+C编译器
+CFLAGS
+C编译器的flags
+CPP
+C预处理程序
+CPPFLAGS
+C/C++预处理程序flags，比如使用"-Iincludedir"指定一个非标准的头文件目录includedir 。
+LDFLAGS
+连接器flags，比如使用"-L-Llibdir"指定一个非标准的库文件目录libdir 。
