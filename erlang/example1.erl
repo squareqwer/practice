@@ -2,6 +2,7 @@
 
 
 -export([p1/1,
+         p2/1,
         total/1,
         sum/1,
         qsort/1,
@@ -17,7 +18,10 @@
 p1({point,X,Y})->
     X+Y.
 
-
+p2(X) when X > 0 ->
+    X + p2(X - 1);
+p2(X) when X < 0;X == 0 ->
+    X.
 
 cost(apple)->
 io:format("apple~n"),
@@ -83,10 +87,10 @@ odds_and_evens_acc(L)->
     odds_and_evens_acc(L,[],[]).
 
 odds_and_evens_acc([H|T],Odds,Evens)->
-case (H rem 2) of %%条件判断有点象switch 
-    1 -> odds_and_evens_acc(T,[H|Odds],Evens);
+    case (H rem 2) of %%条件判断有点象switch 
+        1 -> odds_and_evens_acc(T,[H|Odds],Evens);
         0 -> odds_and_evens_acc(T,Odds,[H|Evens])
-                                    end;
+    end;
 odds_and_evens_acc([],Odds,Evens) ->
     {lists:reverse(Odds),lists:reverse(Evens)}.
 
@@ -140,4 +144,4 @@ demo3()->
 -define(DWORD ,32/unsigned-little-integer).
 -define(LONG, 32/unsigned-little-integer).
 -define(WORD, 16/unsigned-little-integer).
--define(BYTE, 8/unsigned-little-integer).)
+-define(BYTE, 8/unsigned-little-integer)).
