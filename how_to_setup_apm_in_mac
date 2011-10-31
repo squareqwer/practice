@@ -1,0 +1,122 @@
+在Mac OS X中配置Apache ＋ PHP ＋ MySQL
+Mac OS X 内置了Apache 和 PHP，这样使用起来非常方便。本文以Mac OS X 10.6.3为例。主要内容包括：
+启动Apache
+运行PHP
+安装MySQL
+使用phpMyAdmin
+配置PHP的MCrypt扩展库
+设置虚拟主机
+启动Apache
+
+有两种方法：
+打开“系统设置偏好（System Preferences）” -> “共享（Sharing）” -> “Web共享（Web Sharing）”
+打开“终端（terminal）”，然后（注意：sudo需要的密码就是系统的root帐号密码）
+运行“sudo apachectl start”，再输入帐号密码，这样Apache就运行了。
+运行“sudo apachectl －v”，你会看到Mac OS X 10.6.3中的Apache版本号：
+Server version: Apache/2.2.14 (Unix)
+Server built:   Feb 11 2010 14:40:31
+这样在浏览器中输入“http://localhost”，就可以看到出现一个内容为“It works!”的页面，它位于“/Library（资源库）/WebServer/Documents/”下，这是Apache的默认根目录。
+注意：开启了Apache就是开启了“Web共享”，这时联网的用户就会通过“http://[本地IP]/”来访问“/Library（资源库）/WebServer/Documents/”目录，通过“http://[本地IP]/~[用户名]”来访问“/Users/[用户名]/Sites/”目录，可以通过设置“系统偏好设置”的“安全（Security）”中的“防火墙（Firewall）”来禁止这种访问。
+运行PHP
+
+在终端中运行“sudo vi /etc/apache2/httpd.conf”，打开Apache的配置文件。（如果不习惯操作终端和vi的可以设置在Finder中显示所有的系统隐藏文件，记得需要重启Finder，这样就可以找到对应文件，随心所欲编辑了，但需要注意的是某些文件的修改需要开启root帐号，但整体上还是在终端上使用sudo来临时获取root权限比较安全。）
+找到“#LoadModule php5_module libexec/apache2/libphp5.so”，把前面的#号去掉，保存（在命令行输入:w）并退出vi（在命令行输入:q）。
+运行“sudo cp /etc/php.ini.default /etc/php.ini”，这样就可以通过php.ini来配置各种PHP功能了。比如：
+;通过下面两项来调整PHP提交文件的最大值，比如phpMyAdmin中导入数据的最大值
+upload_max_filesize = 2M
+post_max_size = 8M
+;比如通过display_errors来控制是否显示PHP程序的报错
+display_errors = Off
+运行“sudo apachectl restart”，重启Apache，这样PHP就可以用了。
+运行“cp /Library/WebServer/Documents/index.html.en /Library/WebServer/Documents/info.php”，即在Apache的根目录下复制index.html.en文件并重命名为info.php
+在终端中运行“vi /Library/WebServer/Document/info.php”，这样就可以在vi中编辑info.php文件了。在“It’s works!”后面加上“<?php phpinfo(); ?>”，然后保存之。这样就可以在http://localhost/info.php中看到有关PHP的信息，比如版本号是5.3.1。
+安装MySQL
+
+由于Mac OS X中并没有预装MySQL，所以需要自己手动安装，目前MySQL的最稳定版本是5.1。MySQL提供了Mac OS X下的安装说明。
+下载MySQL 5.1。选择合适的版本，比如这里选择的是mysql-5.1.46-osx10.6-x86_64.dmg。
+运行dmg，会发现里面有4个文件。首先点击安装mysql-5.1.46-osx10.6-x86_64.pkg，这是MySQL的主安装包。一般情况下，安装文件会自动把MySQL安装到/usr/local下的同名文件夹下。比如点击运行“mysql-5.1.46-osx10.6-x86_64.dmg”会把MySQ安装到“/usr/local/mysql-5.1.46-osx10.6-x86_64”中。一路默认安装完毕即可。
+点击安装第2个文件MySQLStartupItem.pkg，这样MySQL就会自动在开机时自动启动了。
+点击安装第3个文件MySQL.prefPane，这样就会在“系统设置偏好”中看到名为“MySQL”的ICON，通过它就可以设置MySQL开始还是停止，以及是否开机时自动运行。到这里MySQL就基本安装完毕了。
+通过运行“sudo vi /etc/bashrc”，在bash的配置文件中加入mysql和mysqladmin的别名
+#mysql
+alias mysql='/usr/local/mysql/bin/mysql'
+alias mysqladmin='/usr/local/mysql/bin/mysqladmin'
+这样就可以在终端中比较简单地通过命令进行相应的操作，比如安装完毕之后MySQL的root默认密码为空，如果要设置密码可以在终端运行“mysqladmin -u root password "mysqlpassword"”来设置，其中mysqlpassword即root的密码。更多相关内容可以参考B.5.4.1. How to Reset the Root Password。
+注意：Mac OS X的升级或者其他原因可能会导致ＭySQL启动或者开机自动运行，在ＭySQL的操作面板上会提示“Warning:The /usr/local/mysql/data directory is not owned by the 'mysql' or '_mysql' ”，或者在命令行下提示“Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)”，这应该是某种情况下导致/usr/local/mysql/data的宿主发生了改变，只需要运行“sudo chown -R mysql /usr/local/mysql/data”即可。
+另外，使用PHP连接MySQL可能会报错“Can’t connect to local MySQL server through socket ‘/var/mysql/mysql.sock’”，或者使用localhost无法连接MySQL而需要127.0.0.1，原因是连接时候php默认去找/var/mysql/mysql.sock了，但是MAC版本的MYSQL改动了文件的位置，放在/tmp下了。处理办法是按如下修改php.ini：
+mysql.default_socket = /tmp/mysql.sock
+使用phpMyAdmin
+
+phpMyAdmin是用PHP开发的管理MySQL的程序，非常的流行和实用。能够实用phpMyAdmin管理MySQL是检验前面几步成果的非常有效方式。
+下载phpMyAdmin。选择合适的版本，比如我选择的是phpMyAdmin-3.3.2-all-languages.tar.bz2这个版本。
+把“下载（downloads）”中的phpMyAdmin-3.32-all-languages文件夹复制到“/Users/[用户名]/Sites”中，名改名为phpmyadmin。
+复制“/Users/[用户名]/Sites/phpmyadmin/”中的config.sample.inc.php，并命名为config.inc.php
+打开config.inc.php,做如下修改：
+用于Cookie加密，随意的长字符串
+$cfg['blowfish_secret'] = ''; 
+
+当phpMyAdmin中出现“#2002 无法登录 MySQL 服务器”时，
+请把localhost改成127.0.0.1就ok了，
+这是因为MySQL守护程序做了IP绑定（bind-address =127.0.0.1）造成的
+$cfg['Servers'][$i]['host'] = 'localhost';
+
+把false改成true，这样就可以访问无密码的MySQL了，
+即使MySQL设置了密码也可以这样设置，然后在登录phpMyAdmin时输入密码
+$cfg['Servers'][$i]['AllowNoPassword'] = false;
+这样就可以通过http://localhost/~[用户名]/phpmyadmin访问phpMyAdmin了。这个时候就看到一个提示“无法加载 mcrypt 扩展，请检查您的 PHP 配置。”，这就涉及到下一节安装MCrypt扩展了。
+配置PHP的MCrypt扩展
+
+MCrypt是一个功能强大的加密算法扩展库，它包括有22种算法，phpMyAdmin依赖这个PHP扩展库。但是它在Mac OS X下的安装却不那么友善，具体如下：
+下载并解压libmcrypt-2.5.8.tar.bz2。
+在终端执行如下命令（注意如下命令需要安装xcode支持）：
+cd ~/Downloads/libmcrypt-2.5.8/
+./configure --disable-posix-threads --enable-static
+make
+sudo make install
+下载并解压PHP源码文件php-5.3.1.tar.bz2。Mac OS X 10.6.3中预装的PHP版本是5.3.1，而现在最新的PHP版本是5.3.2，你需要依据自己的实际情况选择对应的版本。
+在终端执行如下命令：
+cd ~/Downloads/php-5.3.1/ext/mcrypt
+phpize
+./configure
+make
+cd modules
+sudo cp mcrypt.so /usr/lib/php/extensions/no-debug-non-zts-20090626/
+打开php.ini
+sudo vi /etc/php.ini
+在php.ini中加入如下代码，并保存后退出，然后重启Apache
+extension=/usr/lib/php/extensions/no-debug-non-zts-20090626/mcrypt.so
+当你再访问http://localhost/~[用户名]/phpmyadmin时，你会发现“无法加载 mcrypt 扩展，请检查您的 PHP 配置。”的提示没有了，这就表示MCrypt扩展库安装成功了。
+设置虚拟主机
+
+在终端运行“sudo vi /etc/apache2/httpd.conf”，打开Apche的配置文件
+在httpd.conf中找到“#Include /private/etc/apache2/extra/httpd-vhosts.conf”，去掉前面的“＃”，保存并退出。
+运行“sudo apachectl restart”，重启Apache后就开启了它的虚拟主机配置功能。
+运行“sudo vi /etc/apache2/extra/httpd-vhosts.conf”，这样就打开了配置虚拟主机的文件httpd-vhost.conf，配置你需要的虚拟主机了。需要注意的是该文件默认开启了两个作为例子的虚拟主机：
+<VirtualHost *:80>
+    ServerAdmin webmaster@dummy-host.example.com
+    DocumentRoot "/usr/docs/dummy-host.example.com"
+    ServerName dummy-host.example.com
+    ErrorLog "/private/var/log/apache2/dummy-host.example.com-error_log"
+    CustomLog "/private/var/log/apache2/dummy-host.example.com-access_log" common
+</VirtualHost>
+<VirtualHost *:80>
+    ServerAdmin webmaster@dummy-host2.example.com
+    DocumentRoot "/usr/docs/dummy-host2.example.com"
+    ServerName dummy-host2.example.com
+    ErrorLog "/private/var/log/apache2/dummy-host2.example.com-error_log"
+    CustomLog "/private/var/log/apache2/dummy-host2.example.com-access_log" common
+</VirtualHost> 
+而实际上，这两个虚拟主机是不存在的，在没有配置任何其他虚拟主机时，可能会导致访问localhost时出现如下提示：
+Forbidden
+You don't have permission to access /index.php on this server
+最简单的办法就是在它们每行前面加上#，注释掉就好了，这样既能参考又不导致其他问题。
+增加如下配置
+<VirtualHost *:80>
+    DocumentRoot "/Users/[用户名]/Sites"
+    ServerName sites
+    ErrorLog "/private/var/log/apache2/sites-error_log"
+    CustomLog "/private/var/log/apache2/sites-access_log" common
+</VirtualHost> 
+保存退出，并重启Apache。
+运行“sudo vi /etc/hosts”，打开hosts配置文件，加入”127.0.0.1 sites“，这样就可以配置完成sites虚拟主机了，这样就可以用“http://sites”访问了，其内容和“http://localhost/~[用户名]”完全一致。
+这是利用Mac OS X 10.6.3中原生支持的方式来实现的配置，也可以参考“Mac OS X Leopard: 配置Apache, PHP, SQLite, MySQL, and phpMyAdmin(一) ”和“Mac OS X Leopard: 配置Apache, PHP, SQLite, MySQL, and phpMyAdmin(二) ”。实际上，你还可以使用XAMPP或MacPorts这种第三方提供的集成方案来实现简单的安装和使用。
