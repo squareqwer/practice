@@ -304,7 +304,7 @@ Erlang可表示的浮点数的范围是-10^323 ~ 10 ^308
 @spec get_keys(Value)->[Key].
 @spec erase(Key)->Value.
 @spec erase()->[{Key,Value}].
-如字典个存在键Key对应的值，那么返回对应的值，否则返回原子undefine
+如字典个存在键Key对应的值，那么返回对应的值，否则返回原子undefined
 如果使用进程字典，代码将不在是没有副作用的
 
 引用
