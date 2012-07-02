@@ -72,6 +72,9 @@ git clone git://github.com/dimitri/el-get.git
 使用erlang的httpserver
 git clone git://github.com/mochi/mochiweb.git
 
+* markdown
+git clone git://jblevins.org/git/markdown-mode.git
+
 * erlbattle
 恶狼战役->基于Erlang语言的实时技术学习平台[Erl Base actual time technic learnning env.]
 http://code.google.com/p/erlbattle/ 
